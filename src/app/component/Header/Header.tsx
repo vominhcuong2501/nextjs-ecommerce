@@ -140,11 +140,11 @@ export default function Header() {
 								target='_self'
 								className={`text-${
 									isTheme === 'white' ? 'neutral-9' : 'neutral-1'
-								} text-20 font-bold leading-1-4 group hover:text-blue-4 transition-all duration-200`}
+								} text-20 font-bold leading-1-4 group hover:text-red-1 transition-all duration-200`}
 							>
 								Product
 							</Link>
-							<span className='before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-blue-4 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'></span>
+							<span className='before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-red-1 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'></span>
 						</li>
 						<li className='group relative'>
 							<Link
@@ -153,11 +153,11 @@ export default function Header() {
 								target='_self'
 								className={`text-${
 									isTheme === 'white' ? 'neutral-9' : 'neutral-1'
-								} text-20 font-bold leading-1-4 group hover:text-blue-4 transition-all duration-200`}
+								} text-20 font-bold leading-1-4 group hover:text-red-1 transition-all duration-200`}
 							>
 								About
 							</Link>
-							<span className='before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-blue-4 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'></span>
+							<span className='before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-red-1 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'></span>
 						</li>
 						<li className='group relative'>
 							<Link
@@ -166,11 +166,11 @@ export default function Header() {
 								target='_self'
 								className={`text-${
 									isTheme === 'white' ? 'neutral-9' : 'neutral-1'
-								} text-20 font-bold leading-1-4 group hover:text-blue-4 transition-all duration-200`}
+								} text-20 font-bold leading-1-4 group hover:text-red-1 transition-all duration-200`}
 							>
 								Contact
 							</Link>
-							<span className='before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-blue-4 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'></span>
+							<span className='before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-red-1 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'></span>
 						</li>
 						<li className='group relative'>
 							<Link
@@ -179,11 +179,11 @@ export default function Header() {
 								target='_self'
 								className={`text-${
 									isTheme === 'white' ? 'neutral-9' : 'neutral-1'
-								} text-20 font-bold leading-1-4 group hover:text-blue-4 transition-all duration-200`}
+								} text-20 font-bold leading-1-4 group hover:text-red-1 transition-all duration-200`}
 							>
 								Learn
 							</Link>
-							<span className='before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-blue-4 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'></span>
+							<span className='before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-red-1 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'></span>
 						</li>
 						<li className='group relative'>
 							<Link
@@ -192,11 +192,11 @@ export default function Header() {
 								target='_self'
 								className={`text-${
 									isTheme === 'white' ? 'neutral-9' : 'neutral-1'
-								} text-20 font-bold leading-1-4 group hover:text-blue-4 transition-all duration-200`}
+								} text-20 font-bold leading-1-4 group hover:text-red-1 transition-all duration-200`}
 							>
 								Promotion
 							</Link>
-							<span className='before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-blue-4 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'></span>
+							<span className='before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-red-1 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'></span>
 						</li>
 					</ul>
 				</div>
