@@ -10,8 +10,8 @@ import Providers from '@/lib/hooks/Provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-	title: 'Watch',
-	description: 'Watch'
+	title: 'VMC Watch',
+	description: 'VMC Watch'
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

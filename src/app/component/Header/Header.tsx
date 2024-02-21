@@ -4,9 +4,10 @@ import Link from 'next/link'
 import SwitchThemeButton from '../SwitchThemeButton'
 import ButtonSidebarMenu from '../ButtonSidebarMenu'
 import Image from 'next/image'
-import useUpdateTheme from '@/lib/store/client/updateTheme'
 import { useMounted } from '@/lib/hooks/useMounted'
 import Input from '../Input'
+import Menu from '../Menu'
+import useUpdateTheme from '@/lib/store/client/updateTheme'
 
 export default function Header() {
 	const { isTheme } = useUpdateTheme()
@@ -56,7 +57,7 @@ export default function Header() {
 			{isMounted && (
 				<div
 					className={`max-w-[1920px] mx-auto flex items-center justify-between px-4 py-2 ${
-						isTheme === 'white' ? 'shadow-black1' : 'shadow-black7'
+						isTheme === 'white' ? 'shadow-black1 bg-white' : 'shadow-black7 bg-black'
 					}`}
 				>
 					<div className='flex items-center'>
@@ -130,77 +131,8 @@ export default function Header() {
 					</div>
 				</div>
 			)}
-			{isMounted && (
-				<div className={`max-w-[1920px] mx-auto  px-4 py-2 ${isTheme === 'white' ? 'shadow-black1' : 'shadow-black7'}`}>
-					<ul className={`max-w-[768px] mx-auto flex items-center justify-between px-4 py-2 `}>
-						<li className='group relative'>
-							<Link
-								href='/'
-								title='Product'
-								target='_self'
-								className={`text-${
-									isTheme === 'white' ? 'neutral-9' : 'neutral-1'
-								} text-20 font-bold leading-1-4 group hover:text-red-1 transition-all duration-200`}
-							>
-								Product
-							</Link>
-							<span className='before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-red-1 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'></span>
-						</li>
-						<li className='group relative'>
-							<Link
-								href='/'
-								title='About'
-								target='_self'
-								className={`text-${
-									isTheme === 'white' ? 'neutral-9' : 'neutral-1'
-								} text-20 font-bold leading-1-4 group hover:text-red-1 transition-all duration-200`}
-							>
-								About
-							</Link>
-							<span className='before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-red-1 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'></span>
-						</li>
-						<li className='group relative'>
-							<Link
-								href='/'
-								title='Contact'
-								target='_self'
-								className={`text-${
-									isTheme === 'white' ? 'neutral-9' : 'neutral-1'
-								} text-20 font-bold leading-1-4 group hover:text-red-1 transition-all duration-200`}
-							>
-								Contact
-							</Link>
-							<span className='before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-red-1 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'></span>
-						</li>
-						<li className='group relative'>
-							<Link
-								href='/'
-								title='Learn'
-								target='_self'
-								className={`text-${
-									isTheme === 'white' ? 'neutral-9' : 'neutral-1'
-								} text-20 font-bold leading-1-4 group hover:text-red-1 transition-all duration-200`}
-							>
-								Learn
-							</Link>
-							<span className='before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-red-1 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'></span>
-						</li>
-						<li className='group relative'>
-							<Link
-								href='/'
-								title='Promotion'
-								target='_self'
-								className={`text-${
-									isTheme === 'white' ? 'neutral-9' : 'neutral-1'
-								} text-20 font-bold leading-1-4 group hover:text-red-1 transition-all duration-200`}
-							>
-								Promotion
-							</Link>
-							<span className='before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-red-1 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'></span>
-						</li>
-					</ul>
-				</div>
-			)}
+
+			<Menu />
 		</>
 	)
 }

@@ -1,11 +1,30 @@
+'use client'
+import { useMounted } from '@/lib/hooks/useMounted'
 import Header from './component/Header'
+import SidebarMenu from './component/SidebarMenu'
+import useShowSidebarMenu from '@/lib/store/client/useShowSidebarMenu'
 
 export default function Home() {
+	const isMounted = useMounted()
+	const { isShowSidebarMenu, updateIsShowSidebarMenu } = useShowSidebarMenu()
 	return (
 		<main>
-			<div className='fixed top-0 left-0 right-0 shadow-md backdrop-blur-sm'>
+			<div className='fixed top-0 left-0 right-0 '>
 				<Header />
 			</div>
+			<div
+				className={`fixed top-0 transition-all duration-300 h-screen ${
+					isShowSidebarMenu && isMounted ? 'left-0 !z-50' : '-left-[150vw]'
+				}`}
+			>
+				<SidebarMenu />
+			</div>
+			<div
+				className={`fixed top-0 transition-all duration-300 w-screen h-screen bg-neutral-9 opacity-80  ${
+					isShowSidebarMenu && isMounted ? 'left-0 !z-30' : '-left-[150vw]'
+				}`}
+				onClick={() => updateIsShowSidebarMenu(false)}
+			></div>
 		</main>
 	)
 }
