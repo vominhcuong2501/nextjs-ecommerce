@@ -67,9 +67,7 @@ export default function Header() {
 							viewBox='0 0 44 44'
 							fill='none'
 							xmlns='http://www.w3.org/2000/svg'
-							className={`cursor-pointer border border-transparent transition-all duration-300 rounded-md ${
-								isTheme === 'white' ? 'hover:border-neutral-9' : 'hover:border-neutral-1'
-							}`}
+							className={`cursor-pointer border border-transparent transition-all duration-300 rounded-md icon-search-hover`}
 						>
 							<g clipPath='url(#clip0_161_5736)'>
 								<path
@@ -102,7 +100,7 @@ export default function Header() {
 							viewBox='0 0 24 24'
 							fill='none'
 							xmlns='http://www.w3.org/2000/svg'
-							className={`scale-125 cursor-pointer `}
+							className={`scale-125 cursor-pointer icon-cart-hover`}
 						>
 							<path
 								d='M2 3L2.26491 3.0883C3.58495 3.52832 4.24497 3.74832 4.62248 4.2721C5 4.79587 5 5.49159 5 6.88304V9.5C5 12.3284 5 13.7426 5.87868 14.6213C6.75736 15.5 8.17157 15.5 11 15.5H19'
