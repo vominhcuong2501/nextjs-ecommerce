@@ -33,7 +33,7 @@ const config: Config = {
 			boxShadow: {
 				primary: '0px 4px 16px 0px rgba(0, 0, 0, 0.20)',
 				secondary: '0px 2px 8px 0px rgba(0, 0, 0, 0.10)',
-				black1: '0 2px 8px 0 rgba(0, 0, 0, 0.08)',
+				black1: '0 2px 8px 0 rgba(0, 0, 0, 0.1)',
 				black2: '0 4px 20px 0 rgba(0, 0, 0, 0.1)',
 				black3: '0px 2px 2px 0px rgba(0, 0, 0, 0.04)',
 				black4: '0px 2px 8px 0px rgba(73, 73, 73, 0.08)',
