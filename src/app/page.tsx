@@ -23,12 +23,12 @@ export default function Home() {
 			>
 				<SidebarMenu />
 			</div>
-			<div
-				className={`fixed top-0 transition-all duration-300 w-screen h-screen bg-neutral-9 opacity-80  ${
-					isShowSidebarMenu && isMounted ? 'left-0 !z-30' : '-left-[150vw]'
-				}`}
-				onClick={() => updateIsShowSidebarMenu(false)}
-			></div>
+			{isShowSidebarMenu && isMounted && (
+				<div
+					className={`fixed top-0 transition-all duration-300 w-screen h-screen bg-neutral-9 opacity-80  z-30`}
+					onClick={() => updateIsShowSidebarMenu(false)}
+				></div>
+			)}
 		</main>
 	)
 }
