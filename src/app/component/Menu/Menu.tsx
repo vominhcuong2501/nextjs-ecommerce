@@ -10,10 +10,10 @@ export default function Menu() {
 	return (
 		<>
 			{isMounted && (
-				<ul className={`max-w-[768px] mx-auto flex items-center justify-between gap-7 lg:gap-10 px-4 py-2 `}>
+				<ul className={`max-w-[768px] mx-auto flex items-center justify-between gap-7 lg:gap-10 p-4 `}>
 					<li className='group relative'>
 						<Link
-							href='/'
+							href='/product'
 							title='Product'
 							target='_self'
 							className={`text-${
@@ -38,7 +38,7 @@ export default function Menu() {
 					</li>
 					<li className='group relative'>
 						<Link
-							href='/'
+							href='/contact'
 							title='Contact'
 							target='_self'
 							className={`text-${
@@ -50,7 +50,7 @@ export default function Menu() {
 					</li>
 					<li className='group relative'>
 						<Link
-							href='/'
+							href='/learn'
 							title='Learn'
 							target='_self'
 							className={`text-${
@@ -62,7 +62,7 @@ export default function Menu() {
 					</li>
 					<li className='group relative'>
 						<Link
-							href='/'
+							href='/promotion'
 							title='Promotion'
 							target='_self'
 							className={`text-${

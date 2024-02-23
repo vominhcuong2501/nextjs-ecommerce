@@ -41,7 +41,7 @@ export default function Button(props: ButtonProps) {
 				</div>
 			) : (
 				<button
-					className={` bg-gradient-to-r from-green-400 via-cyan-400 to-indigo-400 lg:h-14 h-11 rounded-[50px] text-14 lg:text-16 font-semibold w-full leading-1-4 text-neutral-1 border-0 transition-all duration-500 ease-in-out scale-100 hover:scale-[1.1] ${newClassName}`}
+					className={` bg-gradient-to-r  lg:h-14 h-11 rounded-[50px] text-14 lg:text-16 font-semibold w-full leading-1-4 text-neutral-1 border-0 transition-all duration-500 ease-in-out scale-100 hover:scale-[1.1] ${newClassName}`}
 					disabled={disabled}
 					{...restParams}
 				>
