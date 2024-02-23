@@ -240,10 +240,17 @@ select {
 	background-color: #000;
 }
 
-.icon-search-hover:hover path {
+.icon-svg-fill-hover:hover path {
 	fill: #e60000;
+	transition: all 0.3s;
 }
 
-.icon-cart-hover:hover path {
+.icon-svg-stroke-hover:hover path {
 	stroke: red;
+	transition: all 0.3s;
+}
+
+.div-parent-svg-fill:hover svg path {
+	fill: #e60000;
+	transition: all 0.3s;
 }

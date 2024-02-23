@@ -52,6 +52,9 @@ const BaseComponent = () => {
 	// 			return router.push(pathname)
 	// 		}
 	// 	}, [tokenUser, userInfo])
+	// useEffect(() => {
+	// window.location.reload()
+	// }, [])
 
 	return <></>
 }

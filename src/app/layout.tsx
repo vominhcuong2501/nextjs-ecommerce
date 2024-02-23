@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<Providers>
 					<NextTopLoaderClient />
 					{/* <AppProvider> */}
-					<BaseComponent />
+					{/* <BaseComponent /> */}
 					{children}
 					{/* </AppProvider> */}
 				</Providers>

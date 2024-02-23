@@ -9,9 +9,7 @@ export default function ButtonSidebarMenu() {
 	return (
 		<button
 			aria-label='Toggle menu'
-			className={`flex items-center gap-2 border border-transparent  cursor-pointer focus:outline-none p-[11px] rounded-md  ${
-				isShowSidebarMenu && '!border-neutral-9'
-			}`}
+			className={`flex items-center gap-2 border border-transparent  cursor-pointer focus:outline-none  `}
 			onClick={() => updateIsShowSidebarMenu(!isShowSidebarMenu)}
 		>
 			<p className='h-5 w-5 flex flex-col justify-around items-center bg-transparent border-none p-0 cursor-pointer focus:outline-none group'>

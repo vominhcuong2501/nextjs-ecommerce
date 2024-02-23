@@ -9,7 +9,7 @@ interface UpdateThemeProps {
 const useUpdateTheme = create<UpdateThemeProps>()(
 	persist(
 		(set) => ({
-			isTheme: 'bg-neutral-1',
+			isTheme: 'white',
 			updateIsTheme: (value: string) => set({ isTheme: value })
 		}),
 		{
