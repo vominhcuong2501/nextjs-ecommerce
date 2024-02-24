@@ -241,16 +241,16 @@ select {
 }
 
 .icon-svg-fill-hover:hover path {
-	fill: #e60000;
+	fill: #ff7207;
 	transition: all 0.3s;
 }
 
 .icon-svg-stroke-hover:hover path {
-	stroke: red;
+	stroke: #ff7207;
 	transition: all 0.3s;
 }
 
 .div-parent-svg-fill:hover svg path {
-	fill: #e60000;
+	fill: #ff7207;
 	transition: all 0.3s;
 }

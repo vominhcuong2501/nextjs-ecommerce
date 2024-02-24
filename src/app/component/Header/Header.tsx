@@ -9,6 +9,8 @@ import Input from '../Input'
 import useUpdateTheme from '@/lib/store/client/updateTheme'
 import Menu from '../Menu'
 import Button from '../Button'
+import IconCart from '../IconCart'
+import ButtonAnimation from '../ButtonAnimation'
 
 export default function Header() {
 	const { isTheme } = useUpdateTheme()
@@ -89,11 +91,14 @@ export default function Header() {
 						<Menu />
 					</div>
 
-					<div className='flex items-center md:hidden absolute top-1/2 -translate-y-1/2 right-4'>
+					<div className='flex items-center gap-2 md:hidden absolute top-1/2 -translate-y-1/2 right-4'>
+						<IconCart quantity={5} />
 						<SwitchThemeButton />
 					</div>
-					<Button
-						className={`max-w-[120px] lg:max-w-[150px] hidden md:flex items-center justify-center gap-2 !h-10 from-green-400 via-cyan-400 to-indigo-400`}
+
+					<ButtonAnimation
+						className={`max-w-[120px] lg:max-w-[150px] hidden md:flex items-center justify-center gap-2 !h-10 from-orange-1 via-orange-5 to-orange-11 hover:from-orange-10 hover:via-orange-6 hover:to-orange-2`}
+						contentButton='Sign In'
 					>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -105,8 +110,7 @@ export default function Header() {
 						>
 							<path strokeLinecap='round' strokeLinejoin='round' d='M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9' />
 						</svg>
-						Sign In
-					</Button>
+					</ButtonAnimation>
 				</div>
 			)}
 		</>

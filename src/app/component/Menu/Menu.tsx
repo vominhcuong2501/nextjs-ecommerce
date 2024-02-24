@@ -18,7 +18,7 @@ export default function Menu() {
 							target='_self'
 							className={`text-${
 								isTheme === 'white' ? 'neutral-9' : 'neutral-1'
-							} text-20 font-bold leading-1-4 group hover:text-red-1 transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-red-1 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0`}
+							} text-20 font-bold leading-1-4 group group-hover:text-orange-11 transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-orange-11 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0`}
 						>
 							Product
 						</Link>
@@ -31,7 +31,7 @@ export default function Menu() {
 							target='_self'
 							className={`text-${
 								isTheme === 'white' ? 'neutral-9' : 'neutral-1'
-							} text-20 font-bold leading-1-4 group hover:text-red-1 transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-red-1 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0`}
+							} text-20 font-bold leading-1-4 group group-hover:text-orange-11 transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-orange-11 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0`}
 						>
 							About
 						</Link>
@@ -43,7 +43,7 @@ export default function Menu() {
 							target='_self'
 							className={`text-${
 								isTheme === 'white' ? 'neutral-9' : 'neutral-1'
-							} text-20 font-bold leading-1-4 group hover:text-red-1 transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-red-1 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0`}
+							} text-20 font-bold leading-1-4 group group-hover:text-orange-11 transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-orange-11 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0`}
 						>
 							Contact
 						</Link>
@@ -55,19 +55,19 @@ export default function Menu() {
 							target='_self'
 							className={`text-${
 								isTheme === 'white' ? 'neutral-9' : 'neutral-1'
-							} text-20 font-bold leading-1-4 group hover:text-red-1 transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-red-1 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0`}
+							} text-20 font-bold leading-1-4 group group-hover:text-orange-11 transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-orange-11 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0`}
 						>
 							Learn
 						</Link>
 					</li>
-					<li className='group relative'>
+					<li className='group relative cursor-pointer'>
 						<Link
 							href='/promotion'
 							title='Promotion'
 							target='_self'
 							className={`text-${
 								isTheme === 'white' ? 'neutral-9' : 'neutral-1'
-							} text-20 font-bold leading-1-4 group hover:text-red-1 transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-red-1 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0`}
+							} text-20 font-bold leading-1-4 group group-hover:text-orange-11 transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-orange-11 before:bottom-0 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0`}
 						>
 							Promotion
 						</Link>

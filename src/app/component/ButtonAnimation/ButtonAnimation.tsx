@@ -1,13 +1,23 @@
 import type { ButtonHTMLAttributes } from 'react'
+import './button.css'
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	isLoading?: boolean
 	customDisabled?: boolean
 	buttonDisableAdditionalClass?: string
+	contentButton?: string
 }
 
-export default function Button(props: ButtonProps) {
-	const { className, isLoading, disabled, customDisabled, buttonDisableAdditionalClass, children, ...restParams } =
-		props
+export default function ButtonAnimation(props: ButtonProps) {
+	const {
+		className,
+		isLoading,
+		disabled,
+		customDisabled,
+		buttonDisableAdditionalClass,
+		children,
+		contentButton,
+		...restParams
+	} = props
 	const newClassName = disabled ? className + ' cursor-not-allowed ' : className
 	return (
 		<>
@@ -40,11 +50,14 @@ export default function Button(props: ButtonProps) {
 				</div>
 			) : (
 				<button
-					className={` bg-gradient-to-r  lg:h-14 h-11 rounded-[50px] text-14 lg:text-16 font-semibold w-full leading-1-4 text-neutral-1 border-0 transition-all duration-500 ease-in-out scale-100 hover:scale-[1.1] ${newClassName}`}
+					// className='buttons button--winona p-0 bg-gray-800 hover:bg-gray-700 hover:text-white relative block focus:outline-none border-2 border-solid rounded-lg text-sm text-center font-semibold uppercase tracking-widest align-middle overflow-hidden'
+					data-text={contentButton}
 					disabled={disabled}
 					{...restParams}
+					className={`buttonAnimation button--winona bg-gradient-to-r lg:h-14 h-11 rounded-[50px] relative block text-14 lg:text-16 font-semibold w-full leading-1-4 text-neutral-1   text-center tracking-widest align-middle overflow-hidden transition-all duration-500 ease-in-out  ${newClassName}`}
 				>
-					{children}
+					<span className='align-middle block'>{children}</span>
+
 					{isLoading && (
 						<svg
 							aria-hidden='true'
@@ -66,6 +79,69 @@ export default function Button(props: ButtonProps) {
 					)}
 				</button>
 			)}
+			{/* <button
+				className='p-4 relative border border-white uppercase font-semibold tracking-wider leading-none overflow-hidden group bg-white'
+				type='button'
+			>
+				<span className='absolute inset-0 bg-text-gradient-blue scale-0 transition-transform duration-300 group-hover:scale-100'></span>
+				<span className='absolute inset-0 flex justify-center items-center font-bold group-hover:translate-x-0'>
+					click
+				</span>
+				click
+			</button> */}
 		</>
 	)
+}
+
+{
+	/* <section>
+<div className="flex flex-wrap justify-center py-20 text-gray-300 my-5">
+	<a
+		href="!"
+		className="button button--winona p-0 bg-gray-800 hover:bg-gray-700 hover:text-white relative block focus:outline-none border-2 border-solid rounded-lg text-sm text-center font-semibold uppercase tracking-widest align-middle overflow-hidden" 
+		data-text="Read More"
+	>
+		<span className="align-middle block">
+			Read More
+		</span>
+	</a>
+</div>
+</section>
+<section>
+<div className="flex flex-wrap justify-center py-20 bg-gray-800 text-gray-800 my-5">
+	<a
+		href="!" 
+		className="button button--moema px-5 py-3 bg-gray-800 hover:bg-gray-700 hover:text-white text-gray-300 relative block focus:outline-none border-2 border-solid rounded-lg text-sm text-center font-semibold uppercase tracking-widest"
+	>
+		Read More
+	</a>
+</div>
+</section>			
+<section>
+<div className="flex flex-wrap justify-center py-20 text-gray-300 my-5">
+	<a
+		href="!" 
+		className="button button--aylen px-5 py-3 bg-gray-800 hover:bg-gray-700 hover:text-white relative block focus:outline-none border-2 border-solid rounded-lg text-sm text-center font-semibold uppercase tracking-widest overflow-hidden"
+	>
+		Read More
+	</a>
+</div>
+</section>
+
+<section>
+<div className="flex flex-wrap justify-center py-20 bg-gray-800 my-5">
+	<a
+		href="!" 
+		className="button button--nina px-5 py-0 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white relative block focus:outline-none border-2 border-solid rounded-lg text-sm text-center font-semibold uppercase tracking-widest overflow-hidden" 
+		data-text="Filter"
+	>
+		<span className="align-middle">F</span>
+		<span className="align-middle">i</span>
+		<span className="align-middle">l</span>
+		<span className="align-middle">t</span>
+		<span className="align-middle">e</span>
+		<span className="align-middle">r</span>
+	</a>
+</div>
+</section> */
 }
