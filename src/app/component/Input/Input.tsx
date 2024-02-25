@@ -63,9 +63,7 @@ export default function Input({
 				</label>
 				<div className='relative'>
 					<input
-						className={`w-full md:h-12 h-11 rounded-[10px] pr-3 pl-10 outline-none transition-colors text-14 lg:text-16 border-[2px] ${
-							isTheme === 'white' ? 'border-neutral-9 text-neutral-1' : 'border-neutral-1 text-neutral-9'
-						}    focus:border-blue-16 leading-1-4 bg-transparent ${classNameInput}  auto-fill-input ${
+						className={`w-full md:h-12 h-11 rounded-[10px]   text-14 lg:text-16   text-neutral-1  border border-transparent  leading-1-4 bg-transparent ${classNameInput}  auto-fill-input ${
 							errorMessage ? 'border-red-1' : ''
 						}`}
 						{...registerResult}

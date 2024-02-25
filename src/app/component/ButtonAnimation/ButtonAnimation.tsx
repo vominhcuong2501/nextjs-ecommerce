@@ -4,7 +4,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	isLoading?: boolean
 	customDisabled?: boolean
 	buttonDisableAdditionalClass?: string
-	contentButton?: string
+	classBackgroundgButton?: string
 }
 
 export default function ButtonAnimation(props: ButtonProps) {
@@ -15,7 +15,7 @@ export default function ButtonAnimation(props: ButtonProps) {
 		customDisabled,
 		buttonDisableAdditionalClass,
 		children,
-		contentButton,
+		classBackgroundgButton,
 		...restParams
 	} = props
 	const newClassName = disabled ? className + ' cursor-not-allowed ' : className
@@ -50,14 +50,15 @@ export default function ButtonAnimation(props: ButtonProps) {
 				</div>
 			) : (
 				<button
-					// className='buttons button--winona p-0 bg-gray-800 hover:bg-gray-700 hover:text-white relative block focus:outline-none border-2 border-solid rounded-lg text-sm text-center font-semibold uppercase tracking-widest align-middle overflow-hidden'
-					data-text={contentButton}
-					disabled={disabled}
+					className={`px-4 py-3 relative border border-neutral-11 font-semibold leading-1-4 overflow-hidden group bg-white rounded-lg ${newClassName} `}
+					type='button'
 					{...restParams}
-					className={`buttonAnimation button--winona bg-gradient-to-r lg:h-14 h-11 rounded-[50px] relative block text-14 lg:text-16 font-semibold w-full leading-1-4 text-neutral-1   text-center tracking-widest align-middle overflow-hidden transition-all duration-500 ease-in-out  ${newClassName}`}
+					disabled={disabled}
 				>
-					<span className='align-middle block'>{children}</span>
-
+					<span
+						className={`absolute inset-0  scale-0 transition-transform duration-300 group-hover:scale-100 ${classBackgroundgButton}`}
+					></span>
+					<span className='flex justify-center items-center font-bold group-hover:translate-x-0'>{children}</span>
 					{isLoading && (
 						<svg
 							aria-hidden='true'
@@ -79,16 +80,6 @@ export default function ButtonAnimation(props: ButtonProps) {
 					)}
 				</button>
 			)}
-			{/* <button
-				className='p-4 relative border border-white uppercase font-semibold tracking-wider leading-none overflow-hidden group bg-white'
-				type='button'
-			>
-				<span className='absolute inset-0 bg-text-gradient-blue scale-0 transition-transform duration-300 group-hover:scale-100'></span>
-				<span className='absolute inset-0 flex justify-center items-center font-bold group-hover:translate-x-0'>
-					click
-				</span>
-				click
-			</button> */}
 		</>
 	)
 }

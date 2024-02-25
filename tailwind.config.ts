@@ -39,7 +39,8 @@ const config: Config = {
 				black4: '0px 2px 8px 0px rgba(73, 73, 73, 0.08)',
 				black5: '0px -2px 6px 0px rgba(0, 0, 0, 0.15)',
 				black6: '0px 3.5px 5.5px 0px rgba(0, 0, 0, 0.02)',
-				black7: '0 2px 8px 0 rgba(255, 255, 255, 1)'
+				black7: '0 2px 8px 0 rgba(255, 255, 255, 1)',
+				black8: '0 0 4px 0 rgba(0, 0, 0, 0.17)'
 			},
 			colors: {
 				'bg-primary': '#F6F6F6',
@@ -108,7 +109,8 @@ const config: Config = {
 					7: 'var(--general-767676, #767676)',
 					8: 'var(--general-363636, #363636)',
 					9: 'var(--general-262626, #262626)',
-					10: 'var(--color-neutral-color-global-black, #000)'
+					10: 'var(--color-neutral-color-global-black, #000)',
+					11: 'var(-general-bbbbbb, #bbbbbb)'
 				},
 				semantic: {
 					1: 'var(--color-semantic-information, #09A6F3)',
@@ -142,7 +144,8 @@ const config: Config = {
 				2: '2'
 			},
 			backgroundImage: (theme) => ({
-				'text-gradient-blue': 'linear-gradient(0deg, rgba(34, 193, 195, 1) 25%, rgba(45, 122, 253, 1) 100%)'
+				'text-gradient-blue': 'linear-gradient(0deg, rgba(34, 193, 195, 1) 25%, rgba(45, 122, 253, 1) 100%)',
+				'orange-top-yellow-bottom': 'linear-gradient(0deg, rgba(240,175,33,1) 0%, rgba(255,114,7,1) 100%);'
 			})
 		},
 		container: {
