@@ -247,6 +247,11 @@ select {
 	transition: all 0.2s;
 }
 
+.div-parent-svg-stroke:hover svg path {
+	stroke: #ff7207;
+	transition: all 0.2s;
+}
+
 .hover-icon-social:hover path {
 	fill: #ff7207;
 	transition: all 0.2s;

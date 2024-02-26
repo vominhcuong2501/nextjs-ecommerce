@@ -8,7 +8,7 @@ export default function ButtonSidebarMenu() {
 	return (
 		<button
 			aria-label='Toggle menu'
-			className={`flex items-center gap-2 border border-neutral-9 p-2 rounded-full  cursor-pointer focus:outline-none hover:border-orange-11 group transform transition duration-200`}
+			className={`flex items-center gap-2  cursor-pointer focus:outline-none hover:border-orange-11 group transform transition duration-200`}
 			onClick={() => updateIsShowSidebarMenu(!isShowSidebarMenu)}
 		>
 			<p className='h-5 w-5 flex flex-col justify-around items-center bg-transparent border-none p-0 cursor-pointer focus:outline-none '>
