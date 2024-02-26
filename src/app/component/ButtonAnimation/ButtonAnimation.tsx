@@ -1,10 +1,10 @@
 import type { ButtonHTMLAttributes } from 'react'
-import './button.css'
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	isLoading?: boolean
 	customDisabled?: boolean
 	buttonDisableAdditionalClass?: string
-	classBackgroundgButton?: string
+	classHoverButton?: string
+	classTextBtnAnimation?: string
 }
 
 export default function ButtonAnimation(props: ButtonProps) {
@@ -15,7 +15,8 @@ export default function ButtonAnimation(props: ButtonProps) {
 		customDisabled,
 		buttonDisableAdditionalClass,
 		children,
-		classBackgroundgButton,
+		classHoverButton,
+		classTextBtnAnimation,
 		...restParams
 	} = props
 	const newClassName = disabled ? className + ' cursor-not-allowed ' : className
@@ -56,9 +57,13 @@ export default function ButtonAnimation(props: ButtonProps) {
 					disabled={disabled}
 				>
 					<span
-						className={`absolute inset-0  scale-0 transition-transform duration-300 group-hover:scale-100 ${classBackgroundgButton}`}
+						className={`absolute inset-0  scale-0 transition-transform duration-300 group-hover:scale-100 ${classHoverButton}`}
 					></span>
-					<span className='flex justify-center items-center font-bold group-hover:translate-x-0'>{children}</span>
+					<span
+						className={`flex justify-center items-center font-bold group-hover:translate-x-0 ${classTextBtnAnimation}`}
+					>
+						{children}
+					</span>
 					{isLoading && (
 						<svg
 							aria-hidden='true'
@@ -82,57 +87,4 @@ export default function ButtonAnimation(props: ButtonProps) {
 			)}
 		</>
 	)
-}
-
-{
-	/* <section>
-<div className="flex flex-wrap justify-center py-20 text-gray-300 my-5">
-	<a
-		href="!"
-		className="button button--winona p-0 bg-gray-800 hover:bg-gray-700 hover:text-white relative block focus:outline-none border-2 border-solid rounded-lg text-sm text-center font-semibold uppercase tracking-widest align-middle overflow-hidden" 
-		data-text="Read More"
-	>
-		<span className="align-middle block">
-			Read More
-		</span>
-	</a>
-</div>
-</section>
-<section>
-<div className="flex flex-wrap justify-center py-20 bg-gray-800 text-gray-800 my-5">
-	<a
-		href="!" 
-		className="button button--moema px-5 py-3 bg-gray-800 hover:bg-gray-700 hover:text-white text-gray-300 relative block focus:outline-none border-2 border-solid rounded-lg text-sm text-center font-semibold uppercase tracking-widest"
-	>
-		Read More
-	</a>
-</div>
-</section>			
-<section>
-<div className="flex flex-wrap justify-center py-20 text-gray-300 my-5">
-	<a
-		href="!" 
-		className="button button--aylen px-5 py-3 bg-gray-800 hover:bg-gray-700 hover:text-white relative block focus:outline-none border-2 border-solid rounded-lg text-sm text-center font-semibold uppercase tracking-widest overflow-hidden"
-	>
-		Read More
-	</a>
-</div>
-</section>
-
-<section>
-<div className="flex flex-wrap justify-center py-20 bg-gray-800 my-5">
-	<a
-		href="!" 
-		className="button button--nina px-5 py-0 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white relative block focus:outline-none border-2 border-solid rounded-lg text-sm text-center font-semibold uppercase tracking-widest overflow-hidden" 
-		data-text="Filter"
-	>
-		<span className="align-middle">F</span>
-		<span className="align-middle">i</span>
-		<span className="align-middle">l</span>
-		<span className="align-middle">t</span>
-		<span className="align-middle">e</span>
-		<span className="align-middle">r</span>
-	</a>
-</div>
-</section> */
 }
