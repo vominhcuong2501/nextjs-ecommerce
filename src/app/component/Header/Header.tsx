@@ -9,7 +9,7 @@ import IconHeart from '../IconHeart'
 import LangSwitcher from '../LangSwitcher'
 const InputSearch = () => {
 	return (
-		<div className='relative md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 mt-2 md:mt-0'>
+		<div className='hidden md:block relative'>
 			<Input
 				name='search'
 				type='text'
@@ -46,7 +46,6 @@ export default function Header() {
 			<div className={`max-w-[1360px] mx-auto px-4 py-2 md:p-4  relative`}>
 				<div className='flex items-center justify-between'>
 					<div className='flex items-center gap-2'>
-						<ButtonSidebarMenu />
 						<Link href={PATH_NAME.HOME} target='_self' title={'Home'}>
 							<Image
 								src={'/logo-vmc-white.jpg'}
@@ -59,14 +58,17 @@ export default function Header() {
 						</Link>
 					</div>
 
-					<div className='flex items-center gap-2 '>
+					<InputSearch />
+
+					<div className='hidden md:flex items-center gap-2 '>
 						<LangSwitcher />
 						<IconHeart quantity={99} />
 						<IconCart quantity={99} />
 					</div>
+					<div className='block md:hidden'>
+						<ButtonSidebarMenu />
+					</div>
 				</div>
-
-				<InputSearch />
 			</div>
 		</>
 	)

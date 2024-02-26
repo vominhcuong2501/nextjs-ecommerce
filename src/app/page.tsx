@@ -9,7 +9,7 @@ export default function Home() {
 
 	return (
 		<main>
-			<div className={`sticky top-0 left-0 right-0 bg-white`}>
+			<div className={`sticky top-0 left-0 right-0 bg-white shadow-black1 md:shadow-none`}>
 				<Header />
 				<Menu />
 			</div>

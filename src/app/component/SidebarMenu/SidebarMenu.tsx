@@ -5,10 +5,10 @@ import useShowSidebarMenu from '@/lib/store/client/useShowSidebarMenu'
 import Image from 'next/image'
 import Button from '../Button'
 import { useState } from 'react'
-import Logo from '../Logo'
 import PATH_NAME from '@/app/constans/pathname'
 import useDataUser from '@/lib/store/client/infomationUser'
 import { useReverseModifyObject } from '@/lib/utils/modifyContent'
+import LangSwitcher from '../LangSwitcher'
 
 export default function SidebarMenu() {
 	const { isShowSidebarMenu, updateIsShowSidebarMenu } = useShowSidebarMenu()
@@ -16,6 +16,7 @@ export default function SidebarMenu() {
 	const isMounted = useMounted()
 	const { userInfo } = useDataUser()
 	const convertUserInfo: any = useReverseModifyObject(userInfo, false)
+	const [isCategories, setIsCategories] = useState(false)
 	return (
 		<>
 			<div className={` bg-white h-screen w-[375px] !z-50 `}>
@@ -47,8 +48,9 @@ export default function SidebarMenu() {
 						/>
 					</svg>
 				</div>
-				<div className='bg-orange-top-yellow-bottom px-4 py-2 '>
-					{isMounted && convertUserInfo.name ? (
+
+				<div className='bg-orange-11 px-4 py-2 md:p-4 '>
+					{isMounted && !convertUserInfo.name ? (
 						<div className='flex items-center gap-4 flex-1 relative'>
 							<svg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'>
 								<path
@@ -72,15 +74,25 @@ export default function SidebarMenu() {
 							</svg>
 							<div>
 								<div className='flex items-center gap-2 text-16 font-semibold text-neutral-1 leading-1-4'>
-									<Link href={'/sign-in'} target='_self' title='Sign In'>
+									<Link
+										href={'/sign-in'}
+										target='_self'
+										className='transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-neutral-1 before:-bottom-1 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-200 hover:before:w-full hover:before:left-0 hover:before:right-0'
+										title='Sign In'
+									>
 										Sign In
 									</Link>
 									<p>|</p>
-									<Link href={'/register'} target='_self' title='Register'>
+									<Link
+										href={'/register'}
+										target='_self'
+										className='transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-neutral-1 before:-bottom-1 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-200 hover:before:w-full hover:before:left-0 hover:before:right-0'
+										title='Register'
+									>
 										Register
 									</Link>
 								</div>
-								<p className='text-12 font-medium text-neutral-1 leading-1-4'>Sign in to get more opportunities</p>
+								<p className='text-12 font-medium text-neutral-1 leading-1-4 mt-1'>Sign in to get more opportunities</p>
 							</div>
 						</div>
 					) : (
@@ -99,33 +111,50 @@ export default function SidebarMenu() {
 						</div>
 					)}
 				</div>
-				<ul className={`grid grid-cols-1 items-center mt-4 px-4`}>
+
+				<div className='px-4 py-2 border-b border-neutral-4 flex items-center gap-4'>
+					<p className='text-16 text-neutral-9 font-semibold leading-1-4'>Language: </p>
+					<LangSwitcher />
+				</div>
+
+				<ul className={`grid grid-cols-1 items-center px-4 mt-2 gap-4`}>
 					<li className='group relative'>
-						<Link
-							href='/categories'
-							title='Categories'
-							target='_self'
-							className={`text-neutral-8 text-16 md:text-20 font-medium hover:font-bold leading-1-4 hover:text-orange-11 hover:pl-3 hover:pr-2 hover:border-orange-13 hover:bg-orange-13 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11 before:transition-all before:duration-200 py-2 flex items-center justify-between`}
+						<p
+							className={`text-neutral-8 text-16 font-medium hover:font-bold leading-1-4 hover:text-orange-11 hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11 before:transition-all before:duration-200 flex items-center justify-between`}
+							onClick={() => setIsCategories(!isCategories)}
 						>
 							Categories
-							<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
+							<svg
+								xmlns='http://www.w3.org/2000/svg'
+								width='24'
+								height='24'
+								viewBox='0 0 24 24'
+								fill='none'
+								className={` transition-all duration-200 cursor-pointer ${isCategories && 'rotate-180'}`}
+							>
 								<path
 									fillRule='evenodd'
-									d='M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z'
 									clipRule='evenodd'
+									d='M4.43057 8.51192C4.70014 8.19743 5.17361 8.161 5.48811 8.43057L12 14.0122L18.5119 8.43057C18.8264 8.16101 19.2999 8.19743 19.5695 8.51192C19.839 8.82642 19.8026 9.29989 19.4881 9.56946L12.4881 15.5695C12.2072 15.8102 11.7928 15.8102 11.5119 15.5695L4.51192 9.56946C4.19743 9.29989 4.161 8.82641 4.43057 8.51192Z'
+									fill={isCategories ? '#ff7207' : '#000'}
 								/>
 							</svg>
-						</Link>
+						</p>
 					</li>
 					<li className='group relative'>
 						<Link
 							href='/about-us'
 							title='About Us'
 							target='_self'
-							className={`text-neutral-8 text-16 md:text-20 font-medium hover:font-bold leading-1-4 hover:text-orange-11 hover:pl-3 hover:pr-2 hover:border-orange-13 hover:bg-orange-13 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11 before:transition-all before:duration-200 py-2 flex items-center justify-between`}
+							className={`text-neutral-8 text-16 font-medium hover:font-bold leading-1-4 hover:text-orange-11 hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11 before:transition-all before:duration-200 flex items-center justify-between`}
 						>
-							About Us
-							<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
+							<span className='bg-neutral-1 relative z-10'>About Us</span>
+							<svg
+								xmlns='http://www.w3.org/2000/svg'
+								viewBox='0 0 24 24'
+								fill='currentColor'
+								className='w-6 h-6 absolute top-1/2 left-0 -translate-y-1/2 z-1 group-hover:left-[92%] transition-all duration-300 group-hover:left-[92%]'
+							>
 								<path
 									fillRule='evenodd'
 									d='M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z'
@@ -139,10 +168,15 @@ export default function SidebarMenu() {
 							href='/contact-us'
 							title='Contact Us'
 							target='_self'
-							className={`text-neutral-8 text-16 md:text-20 font-medium hover:font-bold leading-1-4 hover:text-orange-11 hover:pl-3 hover:pr-2 hover:border-orange-13 hover:bg-orange-13 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11 before:transition-all before:duration-200 py-2 flex items-center justify-between`}
+							className={`text-neutral-8 text-16 font-medium hover:font-bold leading-1-4 hover:text-orange-11 hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11 before:transition-all before:duration-200 flex items-center justify-between`}
 						>
-							Contact Us
-							<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
+							<span className='bg-neutral-1 relative z-10'>Contact Us</span>
+							<svg
+								xmlns='http://www.w3.org/2000/svg'
+								viewBox='0 0 24 24'
+								fill='currentColor'
+								className='w-6 h-6 absolute top-1/2 left-0 -translate-y-1/2 z-1 group-hover:left-[92%] transition-all duration-300'
+							>
 								<path
 									fillRule='evenodd'
 									d='M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z'
@@ -156,10 +190,15 @@ export default function SidebarMenu() {
 							href='/news'
 							title='News'
 							target='_self'
-							className={`text-neutral-8 text-16 md:text-20 font-medium hover:font-bold leading-1-4 hover:text-orange-11 hover:pl-3 hover:pr-2 hover:border-orange-13 hover:bg-orange-13 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11 before:transition-all before:duration-200 py-2 flex items-center justify-between`}
+							className={`text-neutral-8 text-16 font-medium hover:font-bold leading-1-4 hover:text-orange-11 hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11 before:transition-all before:duration-200 flex items-center justify-between`}
 						>
-							News
-							<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
+							<span className='bg-neutral-1 relative z-10'>News</span>
+							<svg
+								xmlns='http://www.w3.org/2000/svg'
+								viewBox='0 0 24 24'
+								fill='currentColor'
+								className='w-6 h-6 absolute top-1/2 left-0 -translate-y-1/2 z-1 group-hover:left-[92%] transition-all duration-300'
+							>
 								<path
 									fillRule='evenodd'
 									d='M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z'
@@ -173,10 +212,15 @@ export default function SidebarMenu() {
 							href='/promotions'
 							title='Promotions'
 							target='_self'
-							className={`text-neutral-8 text-16 md:text-20 font-medium hover:font-bold leading-1-4 hover:text-orange-11 hover:pl-3 hover:pr-2 hover:border-orange-13 hover:bg-orange-13 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11 before:transition-all before:duration-200 py-2 flex items-center justify-between`}
+							className={`text-neutral-8 text-16 font-medium hover:font-bold leading-1-4 hover:text-orange-11 hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11 before:transition-all before:duration-200 flex items-center justify-between`}
 						>
-							Promotions
-							<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
+							<span className='bg-neutral-1 relative z-10'>Promotions</span>
+							<svg
+								xmlns='http://www.w3.org/2000/svg'
+								viewBox='0 0 24 24'
+								fill='currentColor'
+								className='w-6 h-6 absolute top-1/2 left-0 -translate-y-1/2 z-1 group-hover:left-[92%] transition-all duration-300'
+							>
 								<path
 									fillRule='evenodd'
 									d='M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z'
@@ -196,7 +240,7 @@ export default function SidebarMenu() {
 						viewBox='0 0 24 24'
 						strokeWidth={1.5}
 						stroke='currentColor'
-						className='w-6 h-6'
+						className='w-6 h-6 absolute top-1/2 left-0 -translate-y-1/2 z-1 group-hover:left-[92%] transition-all duration-300'
 					>
 						<path
 							strokeLinecap='round'

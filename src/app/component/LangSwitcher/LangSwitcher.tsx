@@ -6,13 +6,36 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 export default function LangSwitcher() {
-	const isMobile = useDisplay(1024)
+	const isMobile = useDisplay(768)
 	const [language, setLanguage] = useState('en')
 	const { isShowLang, updateIsShowPhone, updateIsShowUser, updateIsShowLang } = useShowModalHeader()
 	return (
 		<>
 			{isMobile ? (
-				''
+				<div className='flex items-center gap-4'>
+					<a
+						href='#'
+						target='_self'
+						className={`p-2 border-2 text-16 rounded-md font-semibold leading-1-4 ${
+							language === 'en' ? ' border-orange-11  text-orange-11' : ' border-neutral-4  text-neutral-6'
+						}`}
+						title='English'
+						onClick={() => setLanguage('en')}
+					>
+						EN
+					</a>
+					<a
+						href='#'
+						target='_self'
+						className={`p-2 border-2 text-16 rounded-md font-semibold leading-1-4 ${
+							language === 'vn' ? ' border-orange-11  text-orange-11' : ' border-neutral-4  text-neutral-6'
+						}`}
+						title='Vietnam'
+						onClick={() => setLanguage('vn')}
+					>
+						VN
+					</a>
+				</div>
 			) : (
 				<div className={`relative group `}>
 					{language === 'en' ? (
@@ -53,15 +76,9 @@ export default function LangSwitcher() {
 							}}
 							className={`px-2 flex items-center gap-2 text-14 leading-1-4 font-bold text-neutral-9 group `}
 						>
-							<Image
-								src={'/assets/icon/icon-flag-vn.svg'}
-								alt='Tieng Viet'
-								title='Tieng Viet'
-								width={'22'}
-								height={'13'}
-							/>
+							<Image src={'/assets/icon/icon-flag-vn.svg'} alt='Vietnam' title='Vietnam' width={'22'} height={'13'} />
 							<span className='transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-neutral-9 before:-bottom-1 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-200 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'>
-								Tieng Viet
+								Vietnam
 							</span>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
@@ -113,7 +130,7 @@ export default function LangSwitcher() {
 							</li>
 							<li
 								onClick={() => {
-									setLanguage('vi')
+									setLanguage('vn')
 									updateIsShowLang(!isShowLang)
 									updateIsShowPhone(false)
 									updateIsShowUser(false)
@@ -121,18 +138,18 @@ export default function LangSwitcher() {
 							>
 								<a
 									href={'#'}
-									title={'Tieng Viet'}
+									title={'Vietnam'}
 									className='flex items-center gap-2 px-4 py-2 text-14 font-medium leading-1-4 text-neutral-8 transition-all duration-200 hover:bg-orange-top-yellow-bottom hover:text-neutral-1'
 									target='_self'
 								>
 									<Image
 										src={'/assets/icon/icon-flag-vn.svg'}
-										alt='Tieng Viet'
-										title='Tieng Viet'
+										alt='Vietnam'
+										title='Vietnam'
 										width={'22'}
 										height={'13'}
 									/>
-									Tieng Viet
+									Vietnam
 								</a>
 							</li>
 						</ul>
