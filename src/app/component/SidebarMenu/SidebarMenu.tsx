@@ -6,162 +6,206 @@ import Image from 'next/image'
 import Button from '../Button'
 import { useState } from 'react'
 import Logo from '../Logo'
+import PATH_NAME from '@/app/constans/pathname'
+import useDataUser from '@/lib/store/client/infomationUser'
+import { useReverseModifyObject } from '@/lib/utils/modifyContent'
 
 export default function SidebarMenu() {
-	const isMounted = useMounted()
 	const { isShowSidebarMenu, updateIsShowSidebarMenu } = useShowSidebarMenu()
 	const [isOpen, setIsOpen] = useState(false)
-
+	const isMounted = useMounted()
+	const { userInfo } = useDataUser()
+	const convertUserInfo: any = useReverseModifyObject(userInfo, false)
 	return (
 		<>
-			<div className={` bg-white h-screen w-[375px] md:w-[768px] !z-50 `}>
-				<div className='relative px-4 py-2 text-center shadow-black1 bg-neutral-8 opacity-50 bg-blur-sm '>
+			<div className={` bg-white h-screen w-[375px] !z-50 `}>
+				<div className='relative px-4 py-2 flex items-center justify-between'>
+					<Link href={PATH_NAME.HOME} target='_self' title={'Home'}>
+						<Image
+							src={'/logo-vmc-white.jpg'}
+							width={134}
+							height={50}
+							alt='VMC'
+							className='w-[118px] h-[44px]'
+							priority
+						/>
+					</Link>
 					<svg
-						width='24'
-						height='24'
-						viewBox='0 0 24 24'
+						width='32'
+						height='32'
+						viewBox='0 0 32 32'
 						fill='none'
 						xmlns='http://www.w3.org/2000/svg'
 						onClick={() => updateIsShowSidebarMenu(!isShowSidebarMenu)}
-						className='icon-svg-fill-hover cursor-pointer absolute top-1/2 -translate-y-1/2 left-4'
+						className='icon-svg-fill-hover cursor-pointer border border-transparent hover:border-orange-11 rounded-md transition-all duration-200 scale-125'
 					>
-						<path
-							d='M12.4751 5.18355L7.49731 9.60829C6.56674 10.4355 6.10145 10.8491 5.92997 11.3374C5.77939 11.7663 5.77939 12.2337 5.92997 12.6626C6.10145 13.1509 6.56674 13.5645 7.49731 14.3917L12.4751 18.8165C12.8974 19.1918 13.1086 19.3795 13.2879 19.3862C13.4437 19.3921 13.5934 19.3249 13.6925 19.2046C13.8066 19.0661 13.8066 18.7835 13.8066 18.2185V15.4286C16.2347 15.4286 18.7993 16.2084 20.6719 17.5928C21.6468 18.3135 22.1343 18.6739 22.3199 18.6596C22.5009 18.6458 22.6158 18.5751 22.7097 18.4198C22.806 18.2604 22.7209 17.7625 22.5507 16.7667C21.4458 10.3006 16.9958 8.57143 13.8066 8.57143V5.78148C13.8066 5.21646 13.8066 4.93396 13.6925 4.79545C13.5934 4.67513 13.4437 4.60794 13.2879 4.61378C13.1086 4.62049 12.8974 4.80818 12.4751 5.18355Z'
-							fill='#fff'
-						/>
 						<path
 							fillRule='evenodd'
 							clipRule='evenodd'
-							d='M9.81777 3.98966C9.53592 3.68613 9.06137 3.66856 8.75784 3.95041L3.54163 8.79403C2.5947 9.67333 2.05664 10.9072 2.05664 12.1994C2.05664 13.5616 2.65432 14.8553 3.69163 15.7382L8.78205 20.0711C9.09747 20.3396 9.57081 20.3016 9.8393 19.9861C10.1078 19.6707 10.0697 19.1974 9.75431 18.9289L4.66389 14.596C3.9614 13.998 3.55664 13.122 3.55664 12.1994C3.55664 11.3243 3.92102 10.4887 4.56231 9.89322L9.77852 5.0496C10.082 4.76775 10.0996 4.2932 9.81777 3.98966Z'
-							fill='#fff'
+							d='M8.62615 8.62627C9.01667 8.23574 9.64983 8.23574 10.0404 8.62627L15.9999 14.5859L21.9595 8.62632C22.35 8.2358 22.9832 8.2358 23.3737 8.62632C23.7642 9.01685 23.7642 9.65001 23.3737 10.0405L17.4142 16.0001L23.3736 21.9595C23.7642 22.3501 23.7642 22.9832 23.3736 23.3738C22.9831 23.7643 22.3499 23.7643 21.9594 23.3738L15.9999 17.4143L10.0404 23.3738C9.64989 23.7643 9.01673 23.7643 8.6262 23.3738C8.23568 22.9833 8.23568 22.3501 8.6262 21.9596L14.5857 16.0001L8.62615 10.0405C8.23562 9.64996 8.23562 9.01679 8.62615 8.62627Z'
+							fill='#242424'
 						/>
 					</svg>
-					<Logo />
 				</div>
-
-				<div className='p-4'>
-					<div className=' bg-neutral-2 rounded-2xl px-4 py-2 text-16 font-semibold text-neutral-9 leading-1-4 mb-5 cursor-pointer hover:text-orange-11 transition-all duration-200'>
-						<div className='flex items-center gap-2 flex-1 relative' onClick={() => setIsOpen(!isOpen)}>
+				<div className='bg-orange-top-yellow-bottom px-4 py-2 '>
+					{isMounted && convertUserInfo.name ? (
+						<div className='flex items-center gap-4 flex-1 relative'>
+							<svg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'>
+								<path
+									fillRule='evenodd'
+									clipRule='evenodd'
+									d='M18 9.33718C15.9496 9.33718 14.2875 10.9993 14.2875 13.0497C14.2875 15.1 15.9496 16.7622 18 16.7622C20.0504 16.7622 21.7125 15.1 21.7125 13.0497C21.7125 10.9993 20.0504 9.33718 18 9.33718ZM11.8125 13.0497C11.8125 9.63242 14.5827 6.86218 18 6.86218C21.4173 6.86218 24.1875 9.63242 24.1875 13.0497C24.1875 16.4669 21.4173 19.2372 18 19.2372C14.5827 19.2372 11.8125 16.4669 11.8125 13.0497Z'
+									fill='white'
+								/>
+								<path
+									fillRule='evenodd'
+									clipRule='evenodd'
+									d='M18 2.73745C9.5707 2.73745 2.73745 9.57071 2.73745 18C2.73745 26.4292 9.5707 33.2625 18 33.2625C26.4292 33.2625 33.2625 26.4292 33.2625 18C33.2625 9.57071 26.4292 2.73745 18 2.73745ZM0.262451 18C0.262451 8.2038 8.2038 0.262451 18 0.262451C27.7961 0.262451 35.7374 8.2038 35.7374 18C35.7374 27.7961 27.7961 35.7374 18 35.7374C8.2038 35.7374 0.262451 27.7961 0.262451 18Z'
+									fill='white'
+								/>
+								<path
+									fillRule='evenodd'
+									clipRule='evenodd'
+									d='M11.0175 26.1448C9.93099 27.2716 9.51468 28.939 9.38649 31.2679C9.34893 31.9503 8.76527 32.4731 8.08285 32.4355C7.40044 32.398 6.87767 31.8143 6.91523 31.1319C7.04964 28.6899 7.495 26.2322 9.23591 24.4268C10.9918 22.6059 13.7995 21.7124 18 21.7124C22.2006 21.7124 25.0083 22.6059 26.7641 24.4268C28.505 26.2322 28.9504 28.6899 29.0848 31.1319C29.1224 31.8143 28.5996 32.398 27.9172 32.4355C27.2348 32.4731 26.6511 31.9503 26.6136 31.2679C26.4854 28.939 26.0691 27.2716 24.9825 26.1448C23.9109 25.0334 21.9253 24.1874 18 24.1874C14.0747 24.1874 12.0892 25.0334 11.0175 26.1448Z'
+									fill='white'
+								/>
+							</svg>
+							<div>
+								<div className='flex items-center gap-2 text-16 font-semibold text-neutral-1 leading-1-4'>
+									<Link href={'/sign-in'} target='_self' title='Sign In'>
+										Sign In
+									</Link>
+									<p>|</p>
+									<Link href={'/register'} target='_self' title='Register'>
+										Register
+									</Link>
+								</div>
+								<p className='text-12 font-medium text-neutral-1 leading-1-4'>Sign in to get more opportunities</p>
+							</div>
+						</div>
+					) : (
+						<div className='flex items-center gap-4 flex-1 relative cursor-pointer' onClick={() => setIsOpen(!isOpen)}>
 							<Image
 								src={`./assets/sidebar/avatar.png`}
 								width={44}
 								height={44}
-								alt='Back'
-								title='Back'
+								alt={convertUserInfo.name ? convertUserInfo.name : 'User Name'}
+								title={convertUserInfo.name ? convertUserInfo.name : 'User Name'}
 								loading='lazy'
 							/>
-							<span className='text-limit-1-line'>Hi, Cuong Vo</span>
+							<span className='text-limit-1-line text-16 font-semibold text-neutral-1 leading-1-4'>
+								{convertUserInfo.name ? convertUserInfo.name : 'User Name'}
+							</span>
 						</div>
-					</div>
-
-					<ul className={`grid grid-cols-1 gap-6 items-center mt-6`}>
-						<li className='group relative'>
-							<Link
-								href='/'
-								title='Product'
-								target='_self'
-								className={`text-black  text-20 font-bold leading-1-4 group hover:text-orange-11 transition-all duration-200 flex items-center gap-2 justify-between relative before:absolute before:content-[''] before:bottom-0 before:left-1/2 before:right-1/2 before:h-[1px] before:w-0 before:bg-neutral-4 hover:before:w-full hover:before:left-0 hover:before:right-0 hover:before:bg-orange-11 before:transition-all before:duration-200 border-b border-neutral-4 pb-1`}
-							>
-								Product
-								<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
-									<path
-										fillRule='evenodd'
-										d='M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z'
-										clipRule='evenodd'
-									/>
-								</svg>
-							</Link>
-						</li>
-						<li className='group relative'>
-							<Link
-								href='/'
-								title='About'
-								target='_self'
-								className={`text-black  text-20 font-bold leading-1-4 group hover:text-orange-11 transition-all duration-200 flex items-center gap-2 justify-between relative before:absolute before:content-[''] before:bottom-0 before:left-1/2 before:right-1/2 before:h-[1px] before:w-0 before:bg-neutral-4 hover:before:w-full hover:before:left-0 hover:before:right-0 hover:before:bg-orange-11 before:transition-all before:duration-200 border-b border-neutral-4 pb-1`}
-							>
-								About
-								<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
-									<path
-										fillRule='evenodd'
-										d='M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z'
-										clipRule='evenodd'
-									/>
-								</svg>
-							</Link>
-						</li>
-						<li className='group relative'>
-							<Link
-								href='/'
-								title='Contact'
-								target='_self'
-								className={`text-black  text-20 font-bold leading-1-4 group hover:text-orange-11 transition-all duration-200 flex items-center gap-2 justify-between relative before:absolute before:content-[''] before:bottom-0 before:left-1/2 before:right-1/2 before:h-[1px] before:w-0 before:bg-neutral-4 hover:before:w-full hover:before:left-0 hover:before:right-0 hover:before:bg-orange-11 before:transition-all before:duration-200 border-b border-neutral-4 pb-1`}
-							>
-								Contact
-								<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
-									<path
-										fillRule='evenodd'
-										d='M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z'
-										clipRule='evenodd'
-									/>
-								</svg>
-							</Link>
-						</li>
-						<li className='group relative'>
-							<Link
-								href='/'
-								title='Learn'
-								target='_self'
-								className={`text-black  text-20 font-bold leading-1-4 group hover:text-orange-11 transition-all duration-200 flex items-center gap-2 justify-between relative before:absolute before:content-[''] before:bottom-0 before:left-1/2 before:right-1/2 before:h-[1px] before:w-0 before:bg-neutral-4 hover:before:w-full hover:before:left-0 hover:before:right-0 hover:before:bg-orange-11 before:transition-all before:duration-200 border-b border-neutral-4 pb-1`}
-							>
-								Learn
-								<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
-									<path
-										fillRule='evenodd'
-										d='M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z'
-										clipRule='evenodd'
-									/>
-								</svg>
-							</Link>
-						</li>
-						<li className='group relative'>
-							<Link
-								href='/'
-								title='Promotion'
-								target='_self'
-								className={`text-black  text-20 font-bold leading-1-4 group hover:text-orange-11 transition-all duration-200 flex items-center gap-2 justify-between relative before:absolute before:content-[''] before:bottom-0 before:left-1/2 before:right-1/2 before:h-[1px] before:w-0 before:bg-neutral-4 hover:before:w-full hover:before:left-0 hover:before:right-0 hover:before:bg-orange-11 before:transition-all before:duration-200 border-b border-neutral-4 pb-1`}
-							>
-								Promotion
-								<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
-									<path
-										fillRule='evenodd'
-										d='M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z'
-										clipRule='evenodd'
-									/>
-								</svg>
-							</Link>
-						</li>
-					</ul>
-
-					<Button
-						className={`max-w-[120px] lg:max-w-[150px] flex items-center justify-center gap-2 !h-10 from-orange-1 via-orange-5 to-orange-11`}
-					>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							fill='none'
-							viewBox='0 0 24 24'
-							strokeWidth={1.5}
-							stroke='currentColor'
-							className='w-6 h-6'
-						>
-							<path
-								strokeLinecap='round'
-								strokeLinejoin='round'
-								d='M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75'
-							/>
-						</svg>
-						Log Out
-					</Button>
+					)}
 				</div>
+				<ul className={`grid grid-cols-1 items-center mt-4 px-4`}>
+					<li className='group relative'>
+						<Link
+							href='/categories'
+							title='Categories'
+							target='_self'
+							className={`text-neutral-8 text-16 md:text-20 font-medium hover:font-bold leading-1-4 hover:text-orange-11 hover:pl-3 hover:pr-2 hover:border-orange-13 hover:bg-orange-13 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11 before:transition-all before:duration-200 py-2 flex items-center justify-between`}
+						>
+							Categories
+							<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
+								<path
+									fillRule='evenodd'
+									d='M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z'
+									clipRule='evenodd'
+								/>
+							</svg>
+						</Link>
+					</li>
+					<li className='group relative'>
+						<Link
+							href='/about-us'
+							title='About Us'
+							target='_self'
+							className={`text-neutral-8 text-16 md:text-20 font-medium hover:font-bold leading-1-4 hover:text-orange-11 hover:pl-3 hover:pr-2 hover:border-orange-13 hover:bg-orange-13 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11 before:transition-all before:duration-200 py-2 flex items-center justify-between`}
+						>
+							About Us
+							<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
+								<path
+									fillRule='evenodd'
+									d='M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z'
+									clipRule='evenodd'
+								/>
+							</svg>
+						</Link>
+					</li>
+					<li className='group relative'>
+						<Link
+							href='/contact-us'
+							title='Contact Us'
+							target='_self'
+							className={`text-neutral-8 text-16 md:text-20 font-medium hover:font-bold leading-1-4 hover:text-orange-11 hover:pl-3 hover:pr-2 hover:border-orange-13 hover:bg-orange-13 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11 before:transition-all before:duration-200 py-2 flex items-center justify-between`}
+						>
+							Contact Us
+							<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
+								<path
+									fillRule='evenodd'
+									d='M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z'
+									clipRule='evenodd'
+								/>
+							</svg>
+						</Link>
+					</li>
+					<li className='group relative'>
+						<Link
+							href='/news'
+							title='News'
+							target='_self'
+							className={`text-neutral-8 text-16 md:text-20 font-medium hover:font-bold leading-1-4 hover:text-orange-11 hover:pl-3 hover:pr-2 hover:border-orange-13 hover:bg-orange-13 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11 before:transition-all before:duration-200 py-2 flex items-center justify-between`}
+						>
+							News
+							<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
+								<path
+									fillRule='evenodd'
+									d='M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z'
+									clipRule='evenodd'
+								/>
+							</svg>
+						</Link>
+					</li>
+					<li className='group relative'>
+						<Link
+							href='/promotions'
+							title='Promotions'
+							target='_self'
+							className={`text-neutral-8 text-16 md:text-20 font-medium hover:font-bold leading-1-4 hover:text-orange-11 hover:pl-3 hover:pr-2 hover:border-orange-13 hover:bg-orange-13 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11 before:transition-all before:duration-200 py-2 flex items-center justify-between`}
+						>
+							Promotions
+							<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
+								<path
+									fillRule='evenodd'
+									d='M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z'
+									clipRule='evenodd'
+								/>
+							</svg>
+						</Link>
+					</li>
+				</ul>
+
+				<Button
+					className={`max-w-[120px] lg:max-w-[150px] flex items-center justify-center gap-2 !h-10 from-orange-1 via-orange-5 to-orange-11`}
+				>
+					<svg
+						xmlns='http://www.w3.org/2000/svg'
+						fill='none'
+						viewBox='0 0 24 24'
+						strokeWidth={1.5}
+						stroke='currentColor'
+						className='w-6 h-6'
+					>
+						<path
+							strokeLinecap='round'
+							strokeLinejoin='round'
+							d='M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75'
+						/>
+					</svg>
+					Log Out
+				</Button>
 			</div>
 		</>
 	)

@@ -50,12 +50,12 @@ export default function Menu() {
 						</li>
 						<li className='group relative px-2 lg:px-4 cursor-pointer'>
 							<Link
-								href='/promotion'
-								title='Promotion'
+								href='/promotions'
+								title='Promotions'
 								target='_self'
 								className={`text-neutral-1 text-16 lg:text-18 font-semibold leading-1-4 group transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-neutral-1 before:-bottom-1 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-200 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0`}
 							>
-								Promotion
+								Promotions
 							</Link>
 						</li>
 					</ul>

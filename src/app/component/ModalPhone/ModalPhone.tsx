@@ -3,7 +3,7 @@ import useShowModalHeader from '@/lib/store/client/useShowModalHeader'
 import ButtonAnimation from '../ButtonAnimation'
 
 export default function ModalPhone() {
-	const { isShowPhone, updateIsShowPhone, updateIsShowUser } = useShowModalHeader()
+	const { isShowPhone, updateIsShowPhone, updateIsShowUser, updateIsShowLang } = useShowModalHeader()
 	return (
 		<div className='flex items-center gap-1  relative mt-0'>
 			<svg
@@ -15,6 +15,7 @@ export default function ModalPhone() {
 				onClick={() => {
 					updateIsShowPhone(!isShowPhone)
 					updateIsShowUser(false)
+					updateIsShowLang(false)
 				}}
 				className='cursor-pointer'
 			>
@@ -42,6 +43,7 @@ export default function ModalPhone() {
 				onClick={() => {
 					updateIsShowPhone(!isShowPhone)
 					updateIsShowUser(false)
+					updateIsShowLang(false)
 				}}
 			>
 				+(84)764713925
@@ -56,6 +58,7 @@ export default function ModalPhone() {
 				onClick={() => {
 					updateIsShowPhone(!isShowPhone)
 					updateIsShowUser(false)
+					updateIsShowLang(false)
 				}}
 			>
 				<path

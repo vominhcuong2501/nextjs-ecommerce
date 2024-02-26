@@ -10,7 +10,7 @@ export default function ModalUser() {
 	const isMounted = useMounted()
 	const { userInfo } = useDataUser()
 	const convertUserInfo: any = useReverseModifyObject(userInfo, false)
-	const { isShowUser, updateIsShowPhone, updateIsShowUser } = useShowModalHeader()
+	const { isShowUser, updateIsShowPhone, updateIsShowUser, updateIsShowLang } = useShowModalHeader()
 
 	return (
 		<>
@@ -29,6 +29,7 @@ export default function ModalUser() {
 					onClick={() => {
 						updateIsShowUser(!isShowUser)
 						updateIsShowPhone(false)
+						updateIsShowLang(false)
 					}}
 				>
 					<svg
@@ -85,8 +86,8 @@ export default function ModalUser() {
 								/>
 							</svg>
 						</div>
-						<ul className='grid grid-cols-1 gap-2 mt-2'>
-							<li className='relative group'>
+						<ul className='grid grid-cols-1'>
+							<li className='relative group transition-all duration-200 hover:bg-orange-13 py-1'>
 								<Link
 									href={'#'}
 									title=''
@@ -96,7 +97,7 @@ export default function ModalUser() {
 									Profile Details
 								</Link>
 							</li>
-							<li className='relative group'>
+							<li className='relative group transition-all duration-200 hover:bg-orange-13 py-1'>
 								<Link
 									href={'#'}
 									title=''
@@ -106,7 +107,7 @@ export default function ModalUser() {
 									My Orders
 								</Link>
 							</li>
-							<li className='relative group'>
+							<li className='relative group transition-all duration-200 hover:bg-orange-13 py-1'>
 								<Link
 									href={'#'}
 									title=''
@@ -116,7 +117,7 @@ export default function ModalUser() {
 									Comparison List
 								</Link>
 							</li>
-							<li className='relative group'>
+							<li className='relative group transition-all duration-200 hover:bg-orange-13 py-1'>
 								<Link
 									href={'#'}
 									title=''
@@ -126,7 +127,7 @@ export default function ModalUser() {
 									Messengers
 								</Link>
 							</li>
-							<li className='relative group'>
+							<li className='relative group transition-all duration-200 hover:bg-orange-13 py-1'>
 								<Link
 									href={'#'}
 									title=''
@@ -136,7 +137,7 @@ export default function ModalUser() {
 									My Points
 								</Link>
 							</li>
-							<li className='relative group'>
+							<li className='relative group transition-all duration-200 hover:bg-orange-13 py-1'>
 								<Link
 									href={'#'}
 									title=''
@@ -148,7 +149,7 @@ export default function ModalUser() {
 							</li>
 						</ul>
 						<ButtonAnimation
-							className={`text-orange-11 transition-all duration-200 w-full mt-2 hover:border-orange-11 border-transparent bg-orange-12 `}
+							className={`text-orange-11 transition-all duration-200 w-full mt-2 hover:border-orange-11 border-transparent !bg-orange-12 `}
 							classHoverButton='bg-neutral-1'
 							classTextBtnAnimation='font-normal'
 						>
