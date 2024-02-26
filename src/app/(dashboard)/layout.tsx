@@ -105,7 +105,7 @@ export default function AuthLayout({ children }: CommonLayoutProps) {
 			</div>
 			{isMobile && (
 				<div
-					className={`fixed top-0 transition-all duration-300 ${
+					className={`fixed top-0 transition-all duration-200 ${
 						isShow ? 'right-0 z-50' : '-right-[150vw]'
 					} bg-gradient-to-b from-[#7fe2f3] to-[#5f88c9]`}
 				>
@@ -115,12 +115,12 @@ export default function AuthLayout({ children }: CommonLayoutProps) {
 
 			{isCreateTask && isClient && (
 				<div
-					className={`w-screen h-screen fixed top-0 transition-all duration-300 bg-neutral-9 opacity-80 right-0 !z-30`}
+					className={`w-screen h-screen fixed top-0 transition-all duration-200 bg-neutral-9 opacity-80 right-0 !z-30`}
 					onClick={() => updateIsCreateTask(false)}
 				></div>
 			)}
 			<div
-				className={`fixed top-0 transition-all duration-300 ${
+				className={`fixed top-0 transition-all duration-200 ${
 					isCreateTask && isClient ? 'right-0 !z-50' : '-right-[150vw]'
 				}`}
 			>
@@ -131,12 +131,12 @@ export default function AuthLayout({ children }: CommonLayoutProps) {
 
 			{isSearchProject && isClient && (
 				<div
-					className={`w-screen h-screen fixed top-0 transition-all duration-300 bg-neutral-9 opacity-80 right-0 !z-30`}
+					className={`w-screen h-screen fixed top-0 transition-all duration-200 bg-neutral-9 opacity-80 right-0 !z-30`}
 					onClick={() => updateIsSearchProject(false)}
 				></div>
 			)}
 			<div
-				className={`fixed top-0 transition-all duration-300 ${
+				className={`fixed top-0 transition-all duration-200 ${
 					isSearchProject && isClient ? 'right-0 !z-50' : '-right-[150vw]'
 				}`}
 			>

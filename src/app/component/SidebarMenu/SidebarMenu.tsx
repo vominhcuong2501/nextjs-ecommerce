@@ -40,7 +40,7 @@ export default function SidebarMenu() {
 				</div>
 
 				<div className='p-4'>
-					<div className=' bg-neutral-2 rounded-2xl px-4 py-2 text-16 font-semibold text-neutral-9 leading-1-4 mb-5 cursor-pointer hover:text-orange-11 transition-all duration-300'>
+					<div className=' bg-neutral-2 rounded-2xl px-4 py-2 text-16 font-semibold text-neutral-9 leading-1-4 mb-5 cursor-pointer hover:text-orange-11 transition-all duration-200'>
 						<div className='flex items-center gap-2 flex-1 relative' onClick={() => setIsOpen(!isOpen)}>
 							<Image
 								src={`./assets/sidebar/avatar.png`}
@@ -60,7 +60,7 @@ export default function SidebarMenu() {
 								href='/'
 								title='Product'
 								target='_self'
-								className={`text-black  text-20 font-bold leading-1-4 group hover:text-orange-11 transition-all duration-200 flex items-center gap-2 justify-between relative before:absolute before:content-[''] before:bottom-0 before:left-1/2 before:right-1/2 before:h-[1px] before:w-0 before:bg-neutral-4 hover:before:w-full hover:before:left-0 hover:before:right-0 hover:before:bg-orange-11 before:transition-all before:duration-300 border-b border-neutral-4 pb-1`}
+								className={`text-black  text-20 font-bold leading-1-4 group hover:text-orange-11 transition-all duration-200 flex items-center gap-2 justify-between relative before:absolute before:content-[''] before:bottom-0 before:left-1/2 before:right-1/2 before:h-[1px] before:w-0 before:bg-neutral-4 hover:before:w-full hover:before:left-0 hover:before:right-0 hover:before:bg-orange-11 before:transition-all before:duration-200 border-b border-neutral-4 pb-1`}
 							>
 								Product
 								<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
@@ -77,7 +77,7 @@ export default function SidebarMenu() {
 								href='/'
 								title='About'
 								target='_self'
-								className={`text-black  text-20 font-bold leading-1-4 group hover:text-orange-11 transition-all duration-200 flex items-center gap-2 justify-between relative before:absolute before:content-[''] before:bottom-0 before:left-1/2 before:right-1/2 before:h-[1px] before:w-0 before:bg-neutral-4 hover:before:w-full hover:before:left-0 hover:before:right-0 hover:before:bg-orange-11 before:transition-all before:duration-300 border-b border-neutral-4 pb-1`}
+								className={`text-black  text-20 font-bold leading-1-4 group hover:text-orange-11 transition-all duration-200 flex items-center gap-2 justify-between relative before:absolute before:content-[''] before:bottom-0 before:left-1/2 before:right-1/2 before:h-[1px] before:w-0 before:bg-neutral-4 hover:before:w-full hover:before:left-0 hover:before:right-0 hover:before:bg-orange-11 before:transition-all before:duration-200 border-b border-neutral-4 pb-1`}
 							>
 								About
 								<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
@@ -94,7 +94,7 @@ export default function SidebarMenu() {
 								href='/'
 								title='Contact'
 								target='_self'
-								className={`text-black  text-20 font-bold leading-1-4 group hover:text-orange-11 transition-all duration-200 flex items-center gap-2 justify-between relative before:absolute before:content-[''] before:bottom-0 before:left-1/2 before:right-1/2 before:h-[1px] before:w-0 before:bg-neutral-4 hover:before:w-full hover:before:left-0 hover:before:right-0 hover:before:bg-orange-11 before:transition-all before:duration-300 border-b border-neutral-4 pb-1`}
+								className={`text-black  text-20 font-bold leading-1-4 group hover:text-orange-11 transition-all duration-200 flex items-center gap-2 justify-between relative before:absolute before:content-[''] before:bottom-0 before:left-1/2 before:right-1/2 before:h-[1px] before:w-0 before:bg-neutral-4 hover:before:w-full hover:before:left-0 hover:before:right-0 hover:before:bg-orange-11 before:transition-all before:duration-200 border-b border-neutral-4 pb-1`}
 							>
 								Contact
 								<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
@@ -111,7 +111,7 @@ export default function SidebarMenu() {
 								href='/'
 								title='Learn'
 								target='_self'
-								className={`text-black  text-20 font-bold leading-1-4 group hover:text-orange-11 transition-all duration-200 flex items-center gap-2 justify-between relative before:absolute before:content-[''] before:bottom-0 before:left-1/2 before:right-1/2 before:h-[1px] before:w-0 before:bg-neutral-4 hover:before:w-full hover:before:left-0 hover:before:right-0 hover:before:bg-orange-11 before:transition-all before:duration-300 border-b border-neutral-4 pb-1`}
+								className={`text-black  text-20 font-bold leading-1-4 group hover:text-orange-11 transition-all duration-200 flex items-center gap-2 justify-between relative before:absolute before:content-[''] before:bottom-0 before:left-1/2 before:right-1/2 before:h-[1px] before:w-0 before:bg-neutral-4 hover:before:w-full hover:before:left-0 hover:before:right-0 hover:before:bg-orange-11 before:transition-all before:duration-200 border-b border-neutral-4 pb-1`}
 							>
 								Learn
 								<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>
@@ -128,7 +128,7 @@ export default function SidebarMenu() {
 								href='/'
 								title='Promotion'
 								target='_self'
-								className={`text-black  text-20 font-bold leading-1-4 group hover:text-orange-11 transition-all duration-200 flex items-center gap-2 justify-between relative before:absolute before:content-[''] before:bottom-0 before:left-1/2 before:right-1/2 before:h-[1px] before:w-0 before:bg-neutral-4 hover:before:w-full hover:before:left-0 hover:before:right-0 hover:before:bg-orange-11 before:transition-all before:duration-300 border-b border-neutral-4 pb-1`}
+								className={`text-black  text-20 font-bold leading-1-4 group hover:text-orange-11 transition-all duration-200 flex items-center gap-2 justify-between relative before:absolute before:content-[''] before:bottom-0 before:left-1/2 before:right-1/2 before:h-[1px] before:w-0 before:bg-neutral-4 hover:before:w-full hover:before:left-0 hover:before:right-0 hover:before:bg-orange-11 before:transition-all before:duration-200 border-b border-neutral-4 pb-1`}
 							>
 								Promotion
 								<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' className='w-6 h-6'>

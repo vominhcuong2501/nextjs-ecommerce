@@ -15,7 +15,7 @@ export default function Home() {
 			</div>
 
 			<div
-				className={`fixed top-0 transition-all duration-300 h-screen ${
+				className={`fixed top-0 transition-all duration-200 h-screen ${
 					isShowSidebarMenu ? 'left-0 !z-50' : '-left-[150vw]'
 				}`}
 			>
@@ -23,7 +23,7 @@ export default function Home() {
 			</div>
 			{isShowSidebarMenu && (
 				<div
-					className={`fixed top-0 transition-all duration-300 w-screen h-screen bg-neutral-9 opacity-80  z-30`}
+					className={`fixed top-0 transition-all duration-200 w-screen h-screen bg-neutral-9 opacity-80  z-30`}
 					onClick={() => updateIsShowSidebarMenu(false)}
 				></div>
 			)}

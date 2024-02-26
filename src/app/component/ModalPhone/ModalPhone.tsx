@@ -38,7 +38,7 @@ export default function ModalPhone() {
 				/>
 			</svg>
 			<p
-				className='text-14 font-normal leading-1-4 text-neutral-1 cursor-pointer relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-neutral-1 before:-bottom-1 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 hover:before:w-full hover:before:left-0 hover:before:right-0'
+				className='text-14 font-normal leading-1-4 text-neutral-1 cursor-pointer relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-neutral-1 before:-bottom-1 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-200 hover:before:w-full hover:before:left-0 hover:before:right-0'
 				onClick={() => {
 					updateIsShowPhone(!isShowPhone)
 					updateIsShowUser(false)
@@ -66,7 +66,7 @@ export default function ModalPhone() {
 				/>
 			</svg>
 			<div
-				className={`absolute right-0 -bottom-[278px] p-3 min-w-[250px] bg-neutral-1 shadow-black1 transition-all duration-300 scale-0 rounded-lg  ${
+				className={`absolute right-0 -bottom-[278px] p-3 min-w-[250px] bg-neutral-1 shadow-black1 transition-all duration-200 scale-0 rounded-lg  ${
 					isShowPhone && 'scale-100'
 				}  before:w-0 before:h-0 before:border-solid before:border-transparent before:border-r-[10px] before:border-l-[10px] before:border-b-[10px] before:border-b-neutral-1  before:absolute before:-top-[10px] before:left-[85px] `}
 			>
@@ -79,7 +79,7 @@ export default function ModalPhone() {
 						viewBox='0 0 24 24'
 						fill='none'
 						onClick={() => updateIsShowPhone(false)}
-						className='cursor-pointer border border-transparent hover:border-orange-11 rounded-md transition-all duration-300'
+						className='cursor-pointer border border-transparent hover:border-orange-11 rounded-md transition-all duration-200'
 					>
 						<path
 							fillRule='evenodd'
@@ -92,7 +92,7 @@ export default function ModalPhone() {
 				<p className='text-12 font-medium leading-1-4 text-neutral-7'>Mon-Fri 9.a.m - 6.p.m</p>
 				<a href='tel:+84764713925' target='_blank' title='Request a call'>
 					<ButtonAnimation
-						className={`text-orange-11 hover:text-neutral-1 transition-all duration-300 w-full mt-2 bg-neutral-1 border-orange-11 hover:border-transparent`}
+						className={`text-orange-11 hover:text-neutral-1 transition-all duration-200 w-full mt-2 bg-neutral-1 border-orange-11 hover:border-transparent`}
 						classHoverButton='bg-orange-top-yellow-bottom'
 					>
 						Request a call
@@ -106,7 +106,7 @@ export default function ModalPhone() {
 							height='28'
 							viewBox='0 0 28 28'
 							fill='none'
-							className='hover-icon-social hover:shadow-black1 transition-all duration-300 rounded-full'
+							className='hover-icon-social hover:shadow-black1 transition-all duration-200 rounded-full'
 						>
 							<path
 								d='M27.9908 14.0005C27.9908 21.0714 22.751 26.917 15.944 27.8656C15.3075 27.9539 14.6564 28 13.9954 28C13.2324 28 12.4832 27.9392 11.7535 27.8215C5.08977 26.7483 0 20.9684 0 14.0005C0 6.26843 6.26659 0 13.9964 0C21.7261 0 27.9927 6.26843 27.9927 14.0005H27.9908Z'
@@ -125,7 +125,7 @@ export default function ModalPhone() {
 							height='28'
 							viewBox='0 0 29 28'
 							fill='none'
-							className='hover-icon-social hover:shadow-black1 transition-all duration-300 rounded-full'
+							className='hover-icon-social hover:shadow-black1 transition-all duration-200 rounded-full'
 						>
 							<path
 								d='M14.9091 0H14.8454C7.13326 0 0.881348 6.25374 0.881348 13.9681V14.0319C0.881348 21.7463 7.13326 28 14.8454 28H14.9091C22.6212 28 28.8731 21.7463 28.8731 14.0319V13.9681C28.8731 6.25374 22.6212 0 14.9091 0Z'
@@ -148,7 +148,7 @@ export default function ModalPhone() {
 							height='28'
 							viewBox='0 0 29 28'
 							fill='none'
-							className='hover-icon-social hover:shadow-black1 transition-all duration-300 rounded-full'
+							className='hover-icon-social hover:shadow-black1 transition-all duration-200 rounded-full'
 						>
 							<path
 								d='M28.8896 14C28.8896 6.26801 22.6412 0 14.9335 0C7.22569 0 0.977295 6.26801 0.977295 14C0.977295 21.732 7.22569 28 14.9335 28C22.6412 28 28.8896 21.732 28.8896 14Z'
@@ -166,7 +166,7 @@ export default function ModalPhone() {
 					href='mailto:minhcuongvo2501@gmail.com'
 					target='_blank'
 					title='minhcuongvo2501@gmail.com'
-					className='text-12 text-neutral-9 leading-1-4 font-semibold block hover:text-orange-11 transition-all duration-300'
+					className='text-12 text-neutral-9 leading-1-4 font-semibold block hover:text-orange-11 transition-all duration-200'
 				>
 					minhcuongvo2501@gmail.com
 				</a>

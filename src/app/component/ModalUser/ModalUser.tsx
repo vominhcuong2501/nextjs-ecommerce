@@ -17,7 +17,7 @@ export default function ModalUser() {
 			{isMounted && !convertUserInfo ? (
 				<Link href='/sign-in' title='Sign In' target='_self'>
 					<ButtonAnimation
-						className={`text-orange-11 hover:text-neutral-1 transition-all duration-300  bg-neutral-1 border-transparent hover:border-transparent !py-2`}
+						className={`text-orange-11 hover:text-neutral-1 transition-all duration-200  bg-neutral-1 border-transparent hover:border-transparent !py-2`}
 						classHoverButton='bg-orange-top-yellow-bottom'
 					>
 						Sign In
@@ -58,11 +58,11 @@ export default function ModalUser() {
 							fill='white'
 						/>
 					</svg>
-					<p className='text-14 font-normal leading-1-4 text-neutral-1 cursor-pointer relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-neutral-1 before:-bottom-1 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-300 hover:before:w-full hover:before:left-0 hover:before:right-0'>
+					<p className='text-14 font-normal leading-1-4 text-neutral-1 cursor-pointer relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-neutral-1 before:-bottom-1 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-200 hover:before:w-full hover:before:left-0 hover:before:right-0'>
 						{convertUserInfo?.name ? convertUserInfo?.name : 'My Account'}
 					</p>
 					<div
-						className={`absolute right-0 -bottom-[313px] p-3 min-w-[250px] bg-neutral-1 shadow-black1 transition-all duration-300 scale-0 rounded-lg  ${
+						className={`absolute right-0 -bottom-[313px] p-3 min-w-[250px] bg-neutral-1 shadow-black1 transition-all duration-200 scale-0 rounded-lg  ${
 							isShowUser && 'scale-100'
 						}  before:w-0 before:h-0 before:border-solid before:border-transparent before:border-r-[10px] before:border-l-[10px] before:border-b-[10px] before:border-b-neutral-1  before:absolute before:-top-[10px] before:right-[88px] `}
 					>
@@ -75,7 +75,7 @@ export default function ModalUser() {
 								viewBox='0 0 24 24'
 								fill='none'
 								onClick={() => updateIsShowUser(false)}
-								className='cursor-pointer border border-transparent hover:border-orange-11 rounded-md transition-all duration-300'
+								className='cursor-pointer border border-transparent hover:border-orange-11 rounded-md transition-all duration-200'
 							>
 								<path
 									fillRule='evenodd'
@@ -91,7 +91,7 @@ export default function ModalUser() {
 									href={'#'}
 									title=''
 									target='_self'
-									className='before:absolute before:content-[""] before:h-0 before:w-0.5 before:bg-orange-11 before:left-0 before:rounded before:top-1/2 before:bottom-1/2 before:transition-all before:duration-300 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:pl-2 transition-all duration-300 group-hover:text-orange-11 group-hover:font-semibold text-14'
+									className='before:absolute before:content-[""] before:h-0 before:w-0.5 before:bg-orange-11 before:left-0 before:rounded before:top-1/2 before:bottom-1/2 before:transition-all before:duration-200 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:pl-2 transition-all duration-200 group-hover:text-orange-11 group-hover:font-semibold text-14'
 								>
 									Profile Details
 								</Link>
@@ -101,7 +101,7 @@ export default function ModalUser() {
 									href={'#'}
 									title=''
 									target='_self'
-									className='before:absolute before:content-[""] before:h-0 before:w-0.5 before:bg-orange-11 before:left-0 before:rounded before:top-1/2 before:bottom-1/2 before:transition-all before:duration-300 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:pl-2 transition-all duration-300 group-hover:text-orange-11 group-hover:font-semibold text-14'
+									className='before:absolute before:content-[""] before:h-0 before:w-0.5 before:bg-orange-11 before:left-0 before:rounded before:top-1/2 before:bottom-1/2 before:transition-all before:duration-200 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:pl-2 transition-all duration-200 group-hover:text-orange-11 group-hover:font-semibold text-14'
 								>
 									My Orders
 								</Link>
@@ -111,7 +111,7 @@ export default function ModalUser() {
 									href={'#'}
 									title=''
 									target='_self'
-									className='before:absolute before:content-[""] before:h-0 before:w-0.5 before:bg-orange-11 before:left-0 before:rounded before:top-1/2 before:bottom-1/2 before:transition-all before:duration-300 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:pl-2 transition-all duration-300 group-hover:text-orange-11 group-hover:font-semibold text-14'
+									className='before:absolute before:content-[""] before:h-0 before:w-0.5 before:bg-orange-11 before:left-0 before:rounded before:top-1/2 before:bottom-1/2 before:transition-all before:duration-200 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:pl-2 transition-all duration-200 group-hover:text-orange-11 group-hover:font-semibold text-14'
 								>
 									Comparison List
 								</Link>
@@ -121,7 +121,7 @@ export default function ModalUser() {
 									href={'#'}
 									title=''
 									target='_self'
-									className='before:absolute before:content-[""] before:h-0 before:w-0.5 before:bg-orange-11 before:left-0 before:rounded before:top-1/2 before:bottom-1/2 before:transition-all before:duration-300 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:pl-2 transition-all duration-300 group-hover:text-orange-11 group-hover:font-semibold text-14'
+									className='before:absolute before:content-[""] before:h-0 before:w-0.5 before:bg-orange-11 before:left-0 before:rounded before:top-1/2 before:bottom-1/2 before:transition-all before:duration-200 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:pl-2 transition-all duration-200 group-hover:text-orange-11 group-hover:font-semibold text-14'
 								>
 									Messengers
 								</Link>
@@ -131,7 +131,7 @@ export default function ModalUser() {
 									href={'#'}
 									title=''
 									target='_self'
-									className='before:absolute before:content-[""] before:h-0 before:w-0.5 before:bg-orange-11 before:left-0 before:rounded before:top-1/2 before:bottom-1/2 before:transition-all before:duration-300 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:pl-2 transition-all duration-300 group-hover:text-orange-11 group-hover:font-semibold text-14'
+									className='before:absolute before:content-[""] before:h-0 before:w-0.5 before:bg-orange-11 before:left-0 before:rounded before:top-1/2 before:bottom-1/2 before:transition-all before:duration-200 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:pl-2 transition-all duration-200 group-hover:text-orange-11 group-hover:font-semibold text-14'
 								>
 									My Points
 								</Link>
@@ -141,14 +141,14 @@ export default function ModalUser() {
 									href={'#'}
 									title=''
 									target='_self'
-									className='before:absolute before:content-[""] before:h-0 before:w-0.5 before:bg-orange-11 before:left-0 before:rounded before:top-1/2 before:bottom-1/2 before:transition-all before:duration-300 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:pl-2 transition-all duration-300 group-hover:text-orange-11 group-hover:font-semibold text-14'
+									className='before:absolute before:content-[""] before:h-0 before:w-0.5 before:bg-orange-11 before:left-0 before:rounded before:top-1/2 before:bottom-1/2 before:transition-all before:duration-200 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:pl-2 transition-all duration-200 group-hover:text-orange-11 group-hover:font-semibold text-14'
 								>
 									WishList
 								</Link>
 							</li>
 						</ul>
 						<ButtonAnimation
-							className={`text-orange-11 transition-all duration-300 w-full mt-2 hover:border-orange-11 border-transparent bg-[#FBE4D3] `}
+							className={`text-orange-11 transition-all duration-200 w-full mt-2 hover:border-orange-11 border-transparent bg-orange-12 `}
 							classHoverButton='bg-neutral-1'
 							classTextBtnAnimation='font-normal'
 						>

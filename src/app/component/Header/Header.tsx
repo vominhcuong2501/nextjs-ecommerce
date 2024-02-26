@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Input from '../Input'
 import IconCart from '../IconCart'
 import IconHeart from '../IconHeart'
+import LangSwitcher from '../LangSwitcher'
 const InputSearch = () => {
 	return (
 		<div className='relative md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 mt-2 md:mt-0'>
@@ -59,6 +60,7 @@ export default function Header() {
 					</div>
 
 					<div className='flex items-center gap-2 '>
+						<LangSwitcher />
 						<IconHeart quantity={99} />
 						<IconCart quantity={99} />
 					</div>

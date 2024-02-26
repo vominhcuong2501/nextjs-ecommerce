@@ -1,0 +1,118 @@
+'use client'
+
+import { useDisplay } from '@/lib/hooks/useDisplay'
+import Image from 'next/image'
+import { useState } from 'react'
+
+export default function LangSwitcher() {
+	const isMobile = useDisplay(1024)
+	const [isOpen, setIsOpen] = useState(false)
+	const [language, setLanguage] = useState('en')
+
+	return (
+		<div className={`relative group `}>
+			{language === 'en' ? (
+				<button
+					onClick={() => {
+						setIsOpen(!isOpen)
+					}}
+					className={`px-2 flex items-center gap-2 text-14 leading-1-4 font-bold text-neutral-9 group`}
+				>
+					<Image src={'/assets/icon/icon-flag-en.svg'} alt='English' title='English' width={'22'} height={'13'} />
+					<span className='transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-neutral-9 before:-bottom-1 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-200 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'>
+						English
+					</span>
+					<svg
+						xmlns='http://www.w3.org/2000/svg'
+						width='24'
+						height='24'
+						viewBox='0 0 24 24'
+						fill='none'
+						className={`scale-90 ${isOpen && 'rotate-180'} `}
+					>
+						<path
+							fillRule='evenodd'
+							clipRule='evenodd'
+							d='M4.43057 8.51192C4.70014 8.19743 5.17361 8.161 5.48811 8.43057L12 14.0122L18.5119 8.43057C18.8264 8.16101 19.2999 8.19743 19.5695 8.51192C19.839 8.82642 19.8026 9.29989 19.4881 9.56946L12.4881 15.5695C12.2072 15.8102 11.7928 15.8102 11.5119 15.5695L4.51192 9.56946C4.19743 9.29989 4.161 8.82641 4.43057 8.51192Z'
+							fill='#262626'
+						/>
+					</svg>
+				</button>
+			) : (
+				<button
+					onClick={() => {
+						setIsOpen(!isOpen)
+					}}
+					className={`px-2 flex items-center gap-2 text-14 leading-1-4 font-bold text-neutral-9 group `}
+				>
+					<Image src={'/assets/icon/icon-flag-vn.svg'} alt='Tieng Viet' title='Tieng Viet' width={'22'} height={'13'} />
+					<span className='transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-neutral-9 before:-bottom-1 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-200 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'>
+						Tieng Viet
+					</span>
+					<svg
+						xmlns='http://www.w3.org/2000/svg'
+						width='24'
+						height='24'
+						viewBox='0 0 24 24'
+						fill='none'
+						className={`scale-90 ${isOpen && 'rotate-180'}`}
+					>
+						<path
+							fillRule='evenodd'
+							clipRule='evenodd'
+							d='M4.43057 8.51192C4.70014 8.19743 5.17361 8.161 5.48811 8.43057L12 14.0122L18.5119 8.43057C18.8264 8.16101 19.2999 8.19743 19.5695 8.51192C19.839 8.82642 19.8026 9.29989 19.4881 9.56946L12.4881 15.5695C12.2072 15.8102 11.7928 15.8102 11.5119 15.5695L4.51192 9.56946C4.19743 9.29989 4.161 8.82641 4.43057 8.51192Z'
+							fill='#262626'
+						/>
+					</svg>
+				</button>
+			)}
+
+			<div
+				className={`absolute rounded-lg z-50 top-[calc(100%+8px)] min-w-[156px] overflow-hidden opacity-0 right-0 block h-0 bg-white shadow-black1 drop-shadow-1 transition-all ${
+					isOpen && 'py-2.5 h-auto overflow-visible opacity-100'
+				}`}
+			>
+				<ul>
+					<li
+						onClick={() => {
+							setLanguage('en')
+							setIsOpen(!isOpen)
+						}}
+					>
+						<a
+							href={'#'}
+							title={'English'}
+							className='flex items-center gap-2 px-4 py-2 text-14 font-medium leading-1-4 text-neutral-8 transition-all duration-200 hover:bg-orange-top-yellow-bottom hover:text-neutral-1'
+							target='_self'
+						>
+							<Image src={'/assets/icon/icon-flag-en.svg'} alt='English' title='English' width={'22'} height={'13'} />
+							English
+						</a>
+					</li>
+					<li
+						onClick={() => {
+							setLanguage('vi')
+							setIsOpen(!isOpen)
+						}}
+					>
+						<a
+							href={'#'}
+							title={'Tieng Viet'}
+							className='flex items-center gap-2 px-4 py-2 text-14 font-medium leading-1-4 text-neutral-8 transition-all duration-200 hover:bg-orange-top-yellow-bottom hover:text-neutral-1'
+							target='_self'
+						>
+							<Image
+								src={'/assets/icon/icon-flag-vn.svg'}
+								alt='Tieng Viet'
+								title='Tieng Viet'
+								width={'22'}
+								height={'13'}
+							/>
+							Tieng Viet
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	)
+}

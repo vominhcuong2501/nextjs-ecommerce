@@ -57,7 +57,7 @@ export default function ButtonAnimation(props: ButtonProps) {
 					disabled={disabled}
 				>
 					<span
-						className={`absolute inset-0  scale-0 transition-transform duration-300 group-hover:scale-100 ${classHoverButton}`}
+						className={`absolute inset-0  scale-0 transition-transform duration-200 group-hover:scale-100 ${classHoverButton}`}
 					></span>
 					<span
 						className={`flex justify-center items-center font-bold group-hover:translate-x-0 ${classTextBtnAnimation}`}

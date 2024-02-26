@@ -9,7 +9,7 @@ interface IconCartProps {
 
 export default function IconCart({ quantity }: IconCartProps) {
 	return (
-		<div className='relative hover:scale-125 transition-all duration-300 cursor-pointer'>
+		<div className='relative hover:scale-125 transition-all duration-200 cursor-pointer'>
 			<svg
 				width='44'
 				height='44'

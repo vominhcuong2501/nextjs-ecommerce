@@ -234,25 +234,25 @@ select {
 
 .icon-svg-fill-hover:hover path {
 	fill: #ff7207;
-	transition: all 0.3s;
+	transition: all 0.2s;
 }
 
 .icon-svg-stroke-hover:hover path {
 	stroke: #ff7207;
-	transition: all 0.3s;
+	transition: all 0.2s;
 }
 
 .div-parent-svg-fill:hover svg path {
 	fill: #ff7207;
-	transition: all 0.3s;
+	transition: all 0.2s;
 }
 
 .hover-icon-social:hover path {
 	fill: #ff7207;
-	transition: all 0.3s;
+	transition: all 0.2s;
 }
 
 .hover-icon-social:hover path:nth-child(1) {
 	fill: #fff;
-	transition: all 0.3s;
+	transition: all 0.2s;
 }

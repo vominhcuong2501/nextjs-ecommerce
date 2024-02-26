@@ -171,13 +171,13 @@ export default function ProjectDetail() {
 																	ref={provided.innerRef}
 																	{...provided.draggableProps}
 																	{...provided.dragHandleProps}
-																	className='list-group-item bg-neutral-1 p-5 rounded-2xl  grid grid-cols-1 gap-2 mt-4  transition-all duration-300 hover:shadow-primary group'
+																	className='list-group-item bg-neutral-1 p-5 rounded-2xl  grid grid-cols-1 gap-2 mt-4  transition-all duration-200 hover:shadow-primary group'
 																>
 																	<div className=' flex items-center justify-between '>
 																		<h5 className='text-16 md:text-18 font-bold leading-1-4 text-gradient-blue '>
 																			{ele.taskName}
 																		</h5>
-																		<div className='opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-start gap-2'>
+																		<div className='opacity-0 group-hover:opacity-100 transition-all duration-200 flex items-start gap-2'>
 																			<svg
 																				xmlns='http://www.w3.org/2000/svg'
 																				width='24'
@@ -418,12 +418,12 @@ export default function ProjectDetail() {
 
 			{isEditTask && (
 				<div
-					className={`w-screen h-screen fixed inset-0 transition-all duration-300 bg-neutral-9 opacity-80  !z-30`}
+					className={`w-screen h-screen fixed inset-0 transition-all duration-200 bg-neutral-9 opacity-80  !z-30`}
 					onClick={() => updateIsEditTask(false)}
 				></div>
 			)}
 			<div
-				className={`fixed transition-all duration-300 top-[74px] bottom-[16px] left-[16px] right-[16px] lg:top-[10vh] lg:bottom-[10vh] lg:left-[20vh] lg:right-[20vh] overflow-y-scroll scrollbar-input rounded-xl  ${
+				className={`fixed transition-all duration-200 top-[74px] bottom-[16px] left-[16px] right-[16px] lg:top-[10vh] lg:bottom-[10vh] lg:left-[20vh] lg:right-[20vh] overflow-y-scroll scrollbar-input rounded-xl  ${
 					isEditTask ? 'scale-100 !z-50' : 'scale-0 '
 				}`}
 			>
