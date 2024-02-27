@@ -145,7 +145,7 @@ const config: Config = {
 				'1-5': '1.5',
 				2: '2'
 			},
-			backgroundImage: (theme) => ({
+			backgroundImage: () => ({
 				'text-gradient-blue': 'linear-gradient(0deg, rgba(34, 193, 195, 1) 25%, rgba(45, 122, 253, 1) 100%)',
 				'orange-top-yellow-bottom': 'linear-gradient(0deg, rgba(240,175,33,1) 0%, rgba(255,114,7,1) 100%);'
 			})

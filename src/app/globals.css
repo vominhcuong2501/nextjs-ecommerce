@@ -251,13 +251,3 @@ select {
 	stroke: #ff7207;
 	transition: all 0.2s;
 }
-
-.hover-icon-social:hover path {
-	fill: #ff7207;
-	transition: all 0.2s;
-}
-
-.hover-icon-social:hover path:nth-child(1) {
-	fill: #fff;
-	transition: all 0.2s;
-}
