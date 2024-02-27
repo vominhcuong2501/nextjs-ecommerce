@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 .text-gradient-gray {
 	background: linear-gradient(95deg, #fff 79.99%, #21242f 102.65%);
 	background-clip: text;
@@ -231,23 +237,47 @@ select {
 }
 
 /* =============== New CSS ================ */
-
-.icon-svg-fill-hover:hover path {
-	fill: #ff7207;
-	transition: all 0.2s;
-}
-
-.icon-svg-stroke-hover:hover path {
-	stroke: #ff7207;
-	transition: all 0.2s;
-}
-
 .div-parent-svg-fill:hover svg path {
 	fill: #ff7207;
+	transition: all 0.2s;
+}
+
+.div-parent-heart:hover svg path {
+	fill: red;
 	transition: all 0.2s;
 }
 
 .div-parent-svg-stroke:hover svg path {
 	stroke: #ff7207;
 	transition: all 0.2s;
+}
+
+.banner .swiper-pagination-bullet {
+	width: 30px;
+	height: 18px;
+	font-size: 12px;
+	font-weight: 600;
+	color: #fff;
+	opacity: 1;
+	background: transparent;
+}
+
+.banner .swiper-pagination-bullet-active {
+	color: #ff7207;
+	background: transparent;
+}
+
+.banner .swiper-pagination-bullet-active::before {
+	background-color: #ff7207;
+	width: 20px;
+}
+
+.pagination-product-item .swiper-pagination-bullet {
+	width: 20px;
+	height: 4px;
+	border-radius: 8px;
+	background-color: #acacac;
+}
+.pagination-product-item .swiper-pagination-bullet-active {
+	background: #ff7207;
 }

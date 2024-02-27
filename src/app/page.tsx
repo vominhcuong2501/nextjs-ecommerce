@@ -5,21 +5,142 @@ import useShowSidebarMenu from '@/lib/store/client/useShowSidebarMenu'
 import Menu from './component/Menu'
 import { useDisplay } from '@/lib/hooks/useDisplay'
 import MenuApp from './component/MenuMobile/MenuMobile'
+import Banner from './component/Homepage/Banner'
+import CategoriesHome from './component/Homepage/CategoriesHome'
+import HotDeals from './component/Homepage/HotDeals'
+
+const listProduct = [
+	{
+		id: 1,
+		discount: 10,
+		like: false,
+		keyword: 'meliwa-m20',
+		name: 'Meliwa M20',
+		rate: 4.2,
+		price: 100,
+		unit: '$',
+		comment: ['very good', 'best'],
+		status: 'In Stock',
+		delete: false,
+		addCart: false,
+		listImg: [
+			'./assets/home/product-demo.png',
+			'./assets/home/product-demo.png',
+			'./assets/home/product-demo.png',
+			'./assets/home/product-demo.png'
+		]
+	},
+	{
+		id: 2,
+		discount: 0,
+		like: true,
+		name: 'Meliwa M50',
+		keyword: 'meliwa-m50',
+		rate: 5.0,
+		price: 300,
+		unit: '$',
+		comment: ['very good', 'best'],
+		status: 'In Stock',
+		delete: false,
+		addCart: true,
+		listImg: ['./assets/home/product-demo.png']
+	},
+	{
+		id: 3,
+		discount: 10,
+		like: false,
+		name: 'Meliwa M30',
+		keyword: 'meliwa-m30',
+		rate: 0,
+		price: 150,
+		unit: '$',
+		comment: [''],
+		status: 'In Stock',
+		delete: false,
+		addCart: false,
+		listImg: ['./assets/home/product-demo.png', './assets/home/product-demo.png']
+	},
+	{
+		id: 4,
+		discount: 5,
+		like: false,
+		name: 'Meliwa M60',
+		keyword: 'meliwa-m60',
+		rate: 4.2,
+		price: 200,
+		unit: '$',
+		comment: ['very good', 'best'],
+		status: 'Out Of Stock',
+		delete: false,
+		addCart: false,
+		listImg: ['./assets/home/product-demo.png', './assets/home/product-demo.png', './assets/home/product-demo.png']
+	},
+	{
+		id: 5,
+		discount: 0,
+		like: false,
+		name: 'Meliwa M40',
+		keyword: 'meliwa-m40',
+		rate: 0,
+		price: 150,
+		unit: '$',
+		comment: [''],
+		status: 'In Stock',
+		delete: false,
+		addCart: false,
+		listImg: [
+			'./assets/home/product-demo.png',
+			'./assets/home/product-demo.png',
+			'./assets/home/product-demo.png',
+			'./assets/home/product-demo.png',
+			'./assets/home/product-demo.png'
+		]
+	}
+]
 
 export default function Home() {
 	const { isShowSidebarMenu, updateIsShowSidebarMenu } = useShowSidebarMenu()
 
 	const isMobile = useDisplay(768)
 
+	const contentHotDeal = {
+		image: './assets/home/img-hot-deals.png',
+		imageMobile: './assets/home/img-hot-deals-mobile.png',
+		title: 'Hot Deals',
+		linkCategory: '/categories/top-deals'
+	}
+	const contentTopRated = {
+		image: './assets/home/img-top-rated.png',
+		imageMobile: './assets/home/img-top-rated-mobile.png',
+		title: 'Top Rated',
+		linkCategory: '/categories/top-rated'
+	}
+	const contentNewArrivals = {
+		image: './assets/home/img-new-arrivals.png',
+		imageMobile: './assets/home/img-new-arrivals-mobile.png',
+		title: 'New Arrivals',
+		linkCategory: '/categories/new-arrivals'
+	}
+
 	return (
 		<main>
-			<div className={`sticky top-0 left-0 right-0 bg-white shadow-black1 md:shadow-none`}>
+			<div className={`sticky top-0 left-0 right-0 bg-neutral-1 shadow-black1 md:shadow-none z-50`}>
 				<Header />
 				<Menu />
 			</div>
+			<div className='max-w-[1360px] mx-auto overflow-hidden'>
+				<Banner />
+			</div>
+			<div className='bg-neutral-2 py-2.5 lg:py-[40px]'>
+				<div className='max-w-[1360px] mx-auto overflow-hidden'>
+					<CategoriesHome />
+					<HotDeals data={listProduct} content={contentHotDeal} />
+					<HotDeals data={listProduct} content={contentTopRated} />
+					<HotDeals data={listProduct} content={contentNewArrivals} />
+				</div>
+			</div>
 
-			
-
+			{/* sidebar menu mobile */}
 			<div
 				className={`fixed top-0 transition-all duration-200 h-screen ${
 					isShowSidebarMenu ? 'left-0 !z-50' : '-left-[150vw]'
@@ -27,7 +148,6 @@ export default function Home() {
 			>
 				<SidebarMenu />
 			</div>
-
 			{isShowSidebarMenu && (
 				<div
 					className={`fixed top-0 transition-all duration-200 w-screen h-screen bg-neutral-9 opacity-80  z-30`}
@@ -35,8 +155,9 @@ export default function Home() {
 				></div>
 			)}
 
+			{/* menu mobile  */}
 			{isMobile && (
-				<div className={`fixed bottom-0 left-0 right-0 bg-white shadow-black1 `}>
+				<div className={`sticky bottom-0 left-0 right-0 bg-white shadow-black1 z-50`}>
 					<MenuApp />
 				</div>
 			)}

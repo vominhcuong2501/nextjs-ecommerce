@@ -5,7 +5,7 @@ import ButtonAnimation from '../ButtonAnimation'
 export default function ModalPhone() {
 	const { isShowPhone, updateIsShowPhone, updateIsShowUser, updateIsShowLang } = useShowModalHeader()
 	return (
-		<div className='flex items-center gap-1  relative mt-0'>
+		<div className='flex items-center gap-1  relative mt-0 '>
 			<svg
 				xmlns='http://www.w3.org/2000/svg'
 				width='24'
