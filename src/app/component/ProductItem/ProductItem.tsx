@@ -131,7 +131,7 @@ export default function ProductItem({ item }: ProductItemProps) {
 				{item.status}
 			</p>
 			<div className='flex items-center justify-between mt-2'>
-				<div className='flex items-center gap-2 '>
+				<div className='flex items-center gap-2 flex-col md:flex-row'>
 					{item.discount > 0 ? (
 						<p className='text-18 md:text-24 text-neutral-8 font-bold leading-1-4'>
 							{item.unit}
@@ -157,7 +157,7 @@ export default function ProductItem({ item }: ProductItemProps) {
 					height='44'
 					viewBox='0 0 44 44'
 					fill='none'
-					className='scale-75 md:scale-100'
+					className='scale-90 md:scale-100'
 				>
 					<rect width='44' height='44' rx='22' fill='#FF7207' />
 					<path
