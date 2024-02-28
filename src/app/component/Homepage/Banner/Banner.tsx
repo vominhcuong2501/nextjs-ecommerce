@@ -7,8 +7,10 @@ import 'swiper/css/pagination'
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useDisplay } from '@/lib/hooks/useDisplay'
 
 export default function Banner() {
+	const isMobile = useDisplay(768)
 	const pagination = {
 		clickable: true,
 		renderBullet: function (index: number, className: string) {
@@ -24,32 +26,38 @@ export default function Banner() {
 
 	const dataBanner = [
 		{
-			img: './assets/home/banner-slide-1.png',
+			mobile: './assets/home/banner-slide-1-mobile.png',
+			desktop: './assets/home/banner-slide-1.png',
 			title: 'Banner',
 			link: '#'
 		},
 		{
-			img: './assets/home/banner-slide-2.png',
+			mobile: './assets/home/banner-slide-2-mobile.png',
+			desktop: './assets/home/banner-slide-2.png',
 			title: 'Banner',
 			link: '#'
 		},
 		{
-			img: './assets/home/banner-slide-3.png',
+			mobile: './assets/home/banner-slide-3-mobile.png',
+			desktop: './assets/home/banner-slide-3.png',
 			title: 'Banner',
 			link: '#'
 		},
 		{
-			img: './assets/home/banner-slide-4.png',
+			mobile: './assets/home/banner-slide-4-mobile.png',
+			desktop: './assets/home/banner-slide-4.png',
 			title: 'Banner',
 			link: '#'
 		},
 		{
-			img: './assets/home/banner-slide-5.png',
+			mobile: './assets/home/banner-slide-5-mobile.png',
+			desktop: './assets/home/banner-slide-5.png',
 			title: 'Banner',
 			link: '#'
 		},
 		{
-			img: './assets/home/banner-slide-6.png',
+			mobile: './assets/home/banner-slide-6-mobile.png',
+			desktop: './assets/home/banner-slide-6.png',
 			title: 'Banner',
 			link: '#'
 		}
@@ -95,17 +103,29 @@ export default function Banner() {
 					>
 						{dataBanner?.map((item) => {
 							return (
-								<SwiperSlide key={item.img}>
+								<SwiperSlide key={item.desktop}>
 									<Link href={item.link} target='_self' title={item.link}>
-										<Image
-											src={item.img}
-											alt={item.title}
-											width={793}
-											height={329}
-											title={item.title}
-											loading='lazy'
-											className='w-full h-[156px] sm:h-auto  overflow-hidden'
-										/>
+										{isMobile ? (
+											<Image
+												src={item.mobile}
+												alt={item.title}
+												width={375}
+												height={156}
+												title={item.title}
+												loading='lazy'
+												className='w-full  overflow-hidden'
+											/>
+										) : (
+											<Image
+												src={item.desktop}
+												alt={item.title}
+												width={793}
+												height={329}
+												title={item.title}
+												loading='lazy'
+												className='w-full  overflow-hidden'
+											/>
+										)}
 									</Link>
 								</SwiperSlide>
 							)

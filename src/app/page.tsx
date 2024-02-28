@@ -8,6 +8,9 @@ import MenuApp from './component/MenuMobile/MenuMobile'
 import Banner from './component/Homepage/Banner'
 import CategoriesHome from './component/Homepage/CategoriesHome'
 import HotDeals from './component/Homepage/HotDeals'
+import SliderHome from './component/Homepage/SliderHome'
+import Pioneering from './component/Homepage/Pioneering'
+import NewsHome from './component/Homepage/Banner copy'
 
 const listProduct = [
 	{
@@ -22,6 +25,8 @@ const listProduct = [
 		comment: ['very good', 'best'],
 		status: 'In Stock',
 		delete: false,
+		topRated: false,
+		hotDeal: false,
 		addCart: false,
 		listImg: [
 			'./assets/home/product-demo.png',
@@ -42,6 +47,8 @@ const listProduct = [
 		comment: ['very good', 'best'],
 		status: 'In Stock',
 		delete: false,
+		topRated: false,
+		hotDeal: false,
 		addCart: true,
 		listImg: ['./assets/home/product-demo.png']
 	},
@@ -57,6 +64,8 @@ const listProduct = [
 		comment: [''],
 		status: 'In Stock',
 		delete: false,
+		topRated: false,
+		hotDeal: false,
 		addCart: false,
 		listImg: ['./assets/home/product-demo.png', './assets/home/product-demo.png']
 	},
@@ -72,6 +81,8 @@ const listProduct = [
 		comment: ['very good', 'best'],
 		status: 'Out Of Stock',
 		delete: false,
+		topRated: false,
+		hotDeal: false,
 		addCart: false,
 		listImg: ['./assets/home/product-demo.png', './assets/home/product-demo.png', './assets/home/product-demo.png']
 	},
@@ -87,6 +98,8 @@ const listProduct = [
 		comment: [''],
 		status: 'In Stock',
 		delete: false,
+		topRated: false,
+		hotDeal: false,
 		addCart: false,
 		listImg: [
 			'./assets/home/product-demo.png',
@@ -115,12 +128,6 @@ export default function Home() {
 		title: 'Top Rated',
 		linkCategory: '/categories/top-rated'
 	}
-	const contentNewArrivals = {
-		image: './assets/home/img-new-arrivals.png',
-		imageMobile: './assets/home/img-new-arrivals-mobile.png',
-		title: 'New Arrivals',
-		linkCategory: '/categories/new-arrivals'
-	}
 
 	return (
 		<main>
@@ -135,8 +142,10 @@ export default function Home() {
 				<div className='max-w-[1360px] mx-auto overflow-hidden'>
 					<CategoriesHome />
 					<HotDeals data={listProduct} content={contentHotDeal} />
+					<SliderHome />
 					<HotDeals data={listProduct} content={contentTopRated} />
-					<HotDeals data={listProduct} content={contentNewArrivals} />
+					<Pioneering />
+					<NewsHome />
 				</div>
 			</div>
 

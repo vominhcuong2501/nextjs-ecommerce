@@ -12,4 +12,6 @@ export interface ProductItemProp {
 	id: number
 	listImg: string[]
 	keyword: string
+	topRated: boolean
+	hotDeal: boolean
 }

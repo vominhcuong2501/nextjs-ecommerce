@@ -126,12 +126,14 @@ export default function ProductItem({ item }: ProductItemProps) {
 				)}
 			</div>
 			<p
-				className={`${item.status === 'In Stock' ? 'text-green-2' : 'textRed-1 '} text-12 font-medium leading-1-4 mt-1`}
+				className={`${
+					item.status === 'In Stock' ? 'text-green-2' : 'textRed-1 '
+				} text-12 font-medium leading-1-4 md:mt-1`}
 			>
 				{item.status}
 			</p>
 			<div className='flex items-center justify-between mt-2'>
-				<div className='flex items-center gap-0 md:gap-2 flex-col md:flex-row'>
+				<div className='flex items-center gap-2 '>
 					{item.discount > 0 ? (
 						<p className='text-18 md:text-24 text-neutral-9 font-bold leading-1-4'>
 							{item.unit}
@@ -145,7 +147,7 @@ export default function ProductItem({ item }: ProductItemProps) {
 					)}
 
 					{item.discount > 0 && (
-						<p className='text-16 md:text-18 text-neutral-7 font-medium leading-1-4 line-through'>
+						<p className='text-14 md:text-18 text-neutral-7 font-medium leading-1-4 line-through'>
 							{item.unit}
 							{item.price}
 						</p>
@@ -157,7 +159,7 @@ export default function ProductItem({ item }: ProductItemProps) {
 					height='44'
 					viewBox='0 0 44 44'
 					fill='none'
-					className='transition-all duration-200 group-hover:scale-110'
+					className='scale-75 md:scale-100'
 				>
 					<rect width='44' height='44' rx='22' fill='#FF7207' />
 					<path

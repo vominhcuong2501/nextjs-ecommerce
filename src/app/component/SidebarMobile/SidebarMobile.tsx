@@ -76,7 +76,7 @@ export default function SidebarMobile({ handleCloseSidebarMobi }: SidebarMobileP
 				)}
 			</p>,
 			'5',
-			<div className='bg-background-10  shadow-black6 text-center p-2 rounded-xl'>
+			<div className='bg-neutral-10  shadow-black6 text-center p-2 rounded-xl'>
 				<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'>
 					<path
 						d='M10.2453 2.39175C9.67522 1.77622 8.87893 1.43726 8.00003 1.43726C7.11643 1.43726 6.31751 1.77417 5.75003 2.38589C5.1764 3.00435 4.8969 3.84487 4.96253 4.75249C5.09261 6.54311 6.4552 7.99975 8.00003 7.99975C9.54485 7.99975 10.9051 6.54341 11.0372 4.75307C11.1037 3.85366 10.8225 3.01489 10.2453 2.39175Z'
@@ -96,7 +96,7 @@ export default function SidebarMobile({ handleCloseSidebarMobi }: SidebarMobileP
 				</Link>
 			</p>,
 			'1',
-			<div className='bg-background-10  shadow-black6 text-center p-2 rounded-xl'>
+			<div className='bg-neutral-10  shadow-black6 text-center p-2 rounded-xl'>
 				<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'>
 					<g clipPath='url(#clip0_580_3772)'>
 						<path
@@ -123,7 +123,7 @@ export default function SidebarMobile({ handleCloseSidebarMobi }: SidebarMobileP
 				</Link>
 			</p>,
 			'2',
-			<div className='bg-background-10  shadow-black6 text-center p-2 rounded-xl'>
+			<div className='bg-neutral-10  shadow-black6 text-center p-2 rounded-xl'>
 				<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'>
 					<g clipPath='url(#clip0_580_4324)'>
 						<path
@@ -158,7 +158,7 @@ export default function SidebarMobile({ handleCloseSidebarMobi }: SidebarMobileP
 				</Link>
 			</p>,
 			'3',
-			<div className='bg-background-10  shadow-black6 text-center p-2 rounded-xl'>
+			<div className='bg-neutral-10  shadow-black6 text-center p-2 rounded-xl'>
 				<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'>
 					<path
 						d='M1.4375 11.5152C1.4375 11.9503 1.61035 12.3676 1.91803 12.6753C2.2257 12.983 2.643 13.1558 3.07812 13.1558H12.9219C13.357 13.1558 13.7743 12.983 14.082 12.6753C14.3896 12.3676 14.5625 11.9503 14.5625 11.5152V7.00348H1.4375V11.5152ZM3.37109 9.28864C3.37109 9.05553 3.46369 8.83198 3.62852 8.66715C3.79335 8.50233 4.0169 8.40973 4.25 8.40973H5.65625C5.88935 8.40973 6.1129 8.50233 6.27773 8.66715C6.44256 8.83198 6.53515 9.05553 6.53515 9.28864V9.87457C6.53515 10.1077 6.44256 10.3312 6.27773 10.4961C6.1129 10.6609 5.88935 10.7535 5.65625 10.7535H4.25C4.0169 10.7535 3.79335 10.6609 3.62852 10.4961C3.46369 10.3312 3.37109 10.1077 3.37109 9.87457V9.28864Z'
@@ -178,7 +178,7 @@ export default function SidebarMobile({ handleCloseSidebarMobi }: SidebarMobileP
 				</Link>
 			</p>,
 			'4',
-			<div className='bg-background-10  shadow-black6 text-center p-2 rounded-xl'>
+			<div className='bg-neutral-10  shadow-black6 text-center p-2 rounded-xl'>
 				<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'>
 					<path
 						d='M13.0391 7.06262H8.9375C8.56454 7.06262 8.20685 6.91446 7.94313 6.65074C7.67941 6.38702 7.53125 6.02933 7.53125 5.65637V1.55481C7.53125 1.52373 7.5189 1.49392 7.49693 1.47195C7.47495 1.44997 7.44514 1.43762 7.41406 1.43762H4.71875C4.22147 1.43762 3.74456 1.63517 3.39292 1.9868C3.04129 2.33843 2.84375 2.81534 2.84375 3.31262V12.6876C2.84375 13.1849 3.04129 13.6618 3.39292 14.0134C3.74456 14.3651 4.22147 14.5626 4.71875 14.5626H11.2812C11.7785 14.5626 12.2554 14.3651 12.6071 14.0134C12.9587 13.6618 13.1562 13.1849 13.1562 12.6876V7.17981C13.1562 7.14873 13.1439 7.11892 13.1219 7.09694C13.0999 7.07497 13.0701 7.06262 13.0391 7.06262Z'
@@ -203,7 +203,7 @@ export default function SidebarMobile({ handleCloseSidebarMobi }: SidebarMobileP
 				Sign Out
 			</p>,
 			'6',
-			<div className='bg-background-10  shadow-black6 text-center p-2 rounded-xl'>
+			<div className='bg-neutral-10  shadow-black6 text-center p-2 rounded-xl'>
 				{' '}
 				<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'>
 					<path

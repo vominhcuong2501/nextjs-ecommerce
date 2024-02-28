@@ -236,7 +236,7 @@ select {
 	background: transparent !important;
 }
 
-/* =============== New CSS ================ */
+/* =============== New CSS Home page ================ */
 .div-parent-svg-fill:hover svg path {
 	fill: #ff7207;
 	transition: all 0.2s;
@@ -252,7 +252,9 @@ select {
 	transition: all 0.2s;
 }
 
-.banner .swiper-pagination-bullet {
+/* banner home  */
+.banner .swiper-pagination-bullet,
+.slide-home .swiper-pagination-bullet {
 	width: 30px;
 	height: 18px;
 	font-size: 12px;
@@ -262,12 +264,14 @@ select {
 	background: transparent;
 }
 
-.banner .swiper-pagination-bullet-active {
+.banner .swiper-pagination-bullet-active,
+.slide-home .swiper-pagination-bullet-active {
 	color: #ff7207;
 	background: transparent;
 }
 
-.banner .swiper-pagination-bullet-active::before {
+.banner .swiper-pagination-bullet-active::before,
+.slide-home .swiper-pagination-bullet-active::before {
 	background-color: #ff7207;
 	width: 20px;
 }
@@ -280,4 +284,44 @@ select {
 }
 .pagination-product-item .swiper-pagination-bullet-active {
 	background: #ff7207;
+}
+
+/* custom pagination swiper  */
+.news-list-swiper .swiper {
+	padding-bottom: 30px !important;
+}
+
+.news-list-swiper .swiper-wrapper {
+	justify-content: space-between !important;
+}
+
+.news-list-swiper .swiper-pagination {
+	bottom: 0 !important;
+}
+
+.news-list-swiper .swiper-pagination-bullet {
+	border-radius: 4px !important;
+	opacity: 0.5 !important;
+	background: #acacac !important;
+	width: 16px !important;
+	height: 4px !important;
+}
+
+.news-list-swiper .swiper-pagination-bullet-active {
+	opacity: 1 !important;
+	width: 40px !important;
+	background: #ff7207 !important;
+}
+
+.news-list-swiper .swiper-slide {
+	max-width: 444px !important;
+}
+
+@media (max-width: 640px) {
+	.slide-home .swiper-pagination-bullet {
+		width: 20px;
+	}
+	.slide-home .swiper-pagination-bullet-active::before {
+		width: 10px;
+	}
 }

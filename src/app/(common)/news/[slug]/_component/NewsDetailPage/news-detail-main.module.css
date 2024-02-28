@@ -1,0 +1,98 @@
+.content-format * {
+  font-size: 1rem;
+  color: #464646;
+}
+
+.content-format h2,
+.content-format h3,
+.content-format h4,
+.content-format h5,
+.content-format p {
+  margin: 8px 0;
+}
+
+.content-format ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.content-format ol {
+  padding-left: 1.5rem;
+  list-style: number;
+}
+
+.content-format ul li,
+.content-format ol li {
+  margin-bottom: 0.5rem;
+}
+
+.content-format ul li:last-child,
+.content-format ol li:last-child {
+  margin-bottom: 0;
+}
+
+.content-format img {
+  border-radius: 0.5rem;
+}
+
+.content-format a {
+  color: #3E507C;
+}
+
+.content-format h2,
+.content-format .h2 {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  color: #3E507C;
+  font-weight: 700;
+}
+
+.content-format h3,
+.content-format .h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #3E507C;
+  font-weight: 600;
+}
+
+.content-format h4,
+.content-format .h4 {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #3E507C;
+  font-weight: 500;
+}
+
+.content-format h5,
+.content-format .h5 {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #3E507C;
+  font-weight: 500;
+}
+
+.content-format img {
+  margin: 12px auto;
+}
+
+@media (min-width: 768px) {
+  .content-format h2,
+  .content-format .h2 {
+    font-size: 1.5rem;
+  }
+
+  .content-format h3,
+  .content-format .h3 {
+    font-size: 1.25rem;
+  }
+
+  .content-format h4,
+  .content-format .h4 {
+    font-size: 1.125rem;
+  }
+
+  .content-format h5,
+  .content-format .h5 {
+    font-size: 1rem;
+  }
+}
