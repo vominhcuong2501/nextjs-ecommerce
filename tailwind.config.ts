@@ -150,7 +150,8 @@ const config: Config = {
 			backgroundImage: () => ({
 				'text-gradient-blue': 'linear-gradient(0deg, rgba(34, 193, 195, 1) 25%, rgba(45, 122, 253, 1) 100%)',
 				'orange-top-yellow-bottom': 'linear-gradient(0deg, rgba(240,175,33,0.9) 0%, rgba(255,114,7,0.7) 100%);',
-				
+				'about-home':
+					'linear-gradient(160deg, rgba(255,224,222,1) 0%, rgba(240,230,254,1) 40%, rgba(219,236,255,1) 100%)'
 			})
 		},
 		container: {
