@@ -63,7 +63,7 @@ export default function CategoriesHome() {
 
 	return (
 		<div className=' bg-neutral-1 py-4 lg:rounded-md'>
-			<h2 className='pl-4 text-18 lg:text-24 font-bold text-neutral-9 leading-1-4'>Popular Categories</h2>
+			<h2 className='pl-4 text-18 lg:text-24 font-bold text-neutral-8 leading-1-4'>Popular Categories</h2>
 			{isMobile ? (
 				<Swiper
 					slidesPerView={2.5}

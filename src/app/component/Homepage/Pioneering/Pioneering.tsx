@@ -17,7 +17,7 @@ export default function Pioneering() {
 					title='Global Reach'
 					loading='lazy'
 				/>
-				<h3 className='text-14 lg:text-18 text-center lg:text-left font-bold leading-1-4 text-neutral-9'>
+				<h3 className='text-14 lg:text-18 text-center lg:text-left font-bold leading-1-4 text-neutral-8'>
 					Global Reach
 				</h3>
 			</div>
@@ -40,7 +40,7 @@ export default function Pioneering() {
 					title='Marketing Opportunities'
 					loading='lazy'
 				/>
-				<h3 className='text-14 lg:text-18 text-center lg:text-left font-bold leading-1-4 text-neutral-9'>
+				<h3 className='text-14 lg:text-18 text-center lg:text-left font-bold leading-1-4 text-neutral-8'>
 					Marketing Opportunities
 				</h3>
 			</div>
@@ -54,7 +54,7 @@ export default function Pioneering() {
 					title='Cost Effective'
 					loading='lazy'
 				/>
-				<h3 className='text-14 lg:text-18 text-center lg:text-left font-bold leading-1-4 text-neutral-9'>
+				<h3 className='text-14 lg:text-18 text-center lg:text-left font-bold leading-1-4 text-neutral-8'>
 					Cost Effective
 				</h3>
 			</div>
@@ -68,7 +68,7 @@ export default function Pioneering() {
 					title='Increased Visibility'
 					loading='lazy'
 				/>
-				<h3 className='text-14 lg:text-18 text-center lg:text-left font-bold leading-1-4 text-neutral-9'>
+				<h3 className='text-14 lg:text-18 text-center lg:text-left font-bold leading-1-4 text-neutral-8'>
 					Increased Visibility
 				</h3>
 			</div>

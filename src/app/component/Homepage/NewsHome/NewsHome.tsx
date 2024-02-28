@@ -5,7 +5,7 @@ export default function NewsHome() {
 	return (
 		<div className='mt-2.5 lg:mt-10'>
 			<div className='flex items-center justify-between'>
-				<h2 className='text-18 lg:text-24 font-bold text-neutral-9 leading-1-4'>Our Articles</h2>
+				<h2 className='text-18 lg:text-24 font-bold text-neutral-8 leading-1-4'>Our Articles</h2>
 				<Link
 					href='/news'
 					target='_self'

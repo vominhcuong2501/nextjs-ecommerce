@@ -9,7 +9,7 @@ export default function MenuApp() {
 		<ul className='grid grid-cols-5 items-center p-2'>
 			<li>
 				<p
-					className='flex flex-col justify-center items-center gap-1 text-12 text-neutral-9 font-medium leading-1-4'
+					className='flex flex-col justify-center items-center gap-1 text-12 text-neutral-8 font-medium leading-1-4'
 					onClick={() => updateIsShowSidebarMenu(true)}
 				>
 					<svg xmlns='http://www.w3.org/2000/svg' width='29' height='28' viewBox='0 0 29 28' fill='none'>
@@ -40,7 +40,7 @@ export default function MenuApp() {
 					href='/search'
 					target='_self'
 					title='Search'
-					className='flex flex-col justify-center items-center gap-1 text-12 text-neutral-9 font-medium leading-1-4'
+					className='flex flex-col justify-center items-center gap-1 text-12 text-neutral-8 font-medium leading-1-4'
 				>
 					<svg xmlns='http://www.w3.org/2000/svg' width='29' height='28' viewBox='0 0 29 28' fill='none'>
 						<path
@@ -58,7 +58,7 @@ export default function MenuApp() {
 					href='/search'
 					target='_self'
 					title='Search'
-					className='flex flex-col justify-center items-center gap-1 text-12 text-neutral-9 font-medium leading-1-4'
+					className='flex flex-col justify-center items-center gap-1 text-12 text-neutral-8 font-medium leading-1-4'
 				>
 					<svg xmlns='http://www.w3.org/2000/svg' width='29' height='28' viewBox='0 0 29 28' fill='none'>
 						<path
@@ -78,7 +78,7 @@ export default function MenuApp() {
 					href='/search'
 					target='_self'
 					title='Search'
-					className='flex flex-col justify-center items-center gap-1 text-12 text-neutral-9 font-medium leading-1-4'
+					className='flex flex-col justify-center items-center gap-1 text-12 text-neutral-8 font-medium leading-1-4'
 				>
 					<svg xmlns='http://www.w3.org/2000/svg' width='29' height='28' viewBox='0 0 29 28' fill='none'>
 						<path
@@ -108,7 +108,7 @@ export default function MenuApp() {
 					href='/search'
 					target='_self'
 					title='Search'
-					className='flex flex-col justify-center items-center gap-1 text-12 text-neutral-9 font-medium leading-1-4'
+					className='flex flex-col justify-center items-center gap-1 text-12 text-neutral-8 font-medium leading-1-4'
 				>
 					<svg xmlns='http://www.w3.org/2000/svg' width='29' height='28' viewBox='0 0 29 28' fill='none'>
 						<path

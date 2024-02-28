@@ -18,9 +18,7 @@ export default function ProductItem({ item }: ProductItemProps) {
 			href={`${item.status === 'Out Of Stock' ? '' : `/categories/type/${item.keyword}`}`}
 			target='_self'
 			title={item.name}
-			className={`${
-				item.status === 'Out Of Stock' && 'cursor-not-allowed'
-			} block px-4 pb-4 pt-[50px] bg-neutral-1 rounded-md relative group transition-all duration-200 hover:scale-105`}
+			className={`block px-4 pb-4 pt-[50px] bg-neutral-1 rounded-md relative group transition-all duration-200 hover:scale-105`}
 		>
 			{/* discount  */}
 			{item.discount > 0 && (
@@ -86,7 +84,7 @@ export default function ProductItem({ item }: ProductItemProps) {
 				})}
 			</Swiper>
 
-			<h3 className='text-14 md:text-16 font-semibold text-neutral-9 leading-1-4 transition-all duration-200 group-hover:text-orange-11'>
+			<h3 className='text-14 md:text-16 font-semibold text-neutral-8 leading-1-4 transition-all duration-200 group-hover:text-orange-11'>
 				{item.name}
 			</h3>
 			<div className='flex items-center gap-5 mt-1'>
@@ -127,7 +125,7 @@ export default function ProductItem({ item }: ProductItemProps) {
 			</div>
 			<p
 				className={`${
-					item.status === 'In Stock' ? 'text-green-2' : 'textRed-1 '
+					item.status === 'In Stock' ? 'text-green-2' : 'text-red-1 '
 				} text-12 font-medium leading-1-4 md:mt-1`}
 			>
 				{item.status}
@@ -135,12 +133,12 @@ export default function ProductItem({ item }: ProductItemProps) {
 			<div className='flex items-center justify-between mt-2'>
 				<div className='flex items-center gap-2 '>
 					{item.discount > 0 ? (
-						<p className='text-18 md:text-24 text-neutral-9 font-bold leading-1-4'>
+						<p className='text-18 md:text-24 text-neutral-8 font-bold leading-1-4'>
 							{item.unit}
 							{item.price - (item.price * item.discount) / 100}
 						</p>
 					) : (
-						<p className='text-18 md:text-24 text-neutral-9 font-bold leading-1-4'>
+						<p className='text-18 md:text-24 text-neutral-8 font-bold leading-1-4'>
 							{item.unit}
 							{item.price}
 						</p>

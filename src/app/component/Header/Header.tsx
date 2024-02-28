@@ -18,7 +18,7 @@ const InputSearch = () => {
 				maxLength={255}
 				placeholder='Search product...'
 				isRequired={false}
-				classNameInput='text-neutral-9 font-medium text-16 leading-1-4 rounded-md border-transparent !bg-neutral-3 pl-2  focus:outline-orange-11'
+				classNameInput='text-neutral-8 font-medium text-16 leading-1-4 rounded-md border-transparent !bg-neutral-2 pl-2  focus:outline-orange-11'
 			/>
 
 			<svg
@@ -62,7 +62,7 @@ export default function Header() {
 
 					<div className='hidden md:flex items-center gap-2 '>
 						<LangSwitcher />
-						<IconHeart quantity={99} />
+						{/* <IconHeart quantity={99} /> */}
 						<IconCart quantity={99} />
 					</div>
 					<div className='block md:hidden'>

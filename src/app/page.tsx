@@ -12,6 +12,7 @@ import SliderHome from './component/Homepage/SliderHome'
 import Pioneering from './component/Homepage/Pioneering'
 import NewsHome from './component/Homepage/NewsHome'
 import AboutHome from './component/Homepage/AboutHome'
+import Footer from './component/Footer'
 
 const listProduct = [
 	{
@@ -150,6 +151,7 @@ export default function Home() {
 				</div>
 			</div>
 			<AboutHome />
+			<Footer />
 
 			{/* sidebar menu mobile */}
 			<div

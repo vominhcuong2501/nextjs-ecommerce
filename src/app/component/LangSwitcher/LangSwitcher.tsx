@@ -45,7 +45,7 @@ export default function LangSwitcher() {
 								updateIsShowPhone(false)
 								updateIsShowUser(false)
 							}}
-							className={`px-2 flex items-center gap-2 text-14 leading-1-4 font-bold text-neutral-9 group`}
+							className={`px-2 flex items-center gap-2 text-14 leading-1-4 font-bold text-neutral-8 group`}
 						>
 							<Image src={'/assets/icon/icon-flag-en.svg'} alt='English' title='English' width={'22'} height={'13'} />
 							<span className='transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-neutral-9 before:-bottom-1 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-200 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'>
@@ -74,7 +74,7 @@ export default function LangSwitcher() {
 								updateIsShowPhone(false)
 								updateIsShowUser(false)
 							}}
-							className={`px-2 flex items-center gap-2 text-14 leading-1-4 font-bold text-neutral-9 group `}
+							className={`px-2 flex items-center gap-2 text-14 leading-1-4 font-bold text-neutral-8 group `}
 						>
 							<Image src={'/assets/icon/icon-flag-vn.svg'} alt='Vietnam' title='Vietnam' width={'22'} height={'13'} />
 							<span className='transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-neutral-9 before:-bottom-1 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-200 group-hover:before:w-full group-hover:before:left-0 group-hover:before:right-0'>

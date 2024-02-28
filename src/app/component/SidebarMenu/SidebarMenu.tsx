@@ -112,7 +112,7 @@ export default function SidebarMenu() {
 				</div>
 
 				<div className='px-4 py-3 border-b border-neutral-4 flex items-center gap-4'>
-					<p className='text-16 text-neutral-9 font-semibold leading-1-4'>Language: </p>
+					<p className='text-16 text-neutral-8 font-semibold leading-1-4'>Language: </p>
 					<LangSwitcher />
 				</div>
 
@@ -122,7 +122,7 @@ export default function SidebarMenu() {
 							href='/categories'
 							title='Categories'
 							target='_self'
-							className={`text-neutral-8 text-16 font-bold leading-1-4 hover:text-orange-11 group-hover:text-orange-11 hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11  before:transition-all before:duration-200`}
+							className={`text-neutral-8 text-16 font-medium leading-1-4 group-hover:text-orange-11 group-hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:before:bg-orange-11  before:transition-all before:duration-200`}
 						>
 							Categories
 						</Link>
@@ -132,7 +132,7 @@ export default function SidebarMenu() {
 							href='/about-us'
 							title='About Us'
 							target='_self'
-							className={`text-neutral-8 text-16 font-bold leading-1-4 hover:text-orange-11 group-hover:text-orange-11 hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11  before:transition-all before:duration-200`}
+							className={`text-neutral-8 text-16 font-medium leading-1-4 group-hover:text-orange-11 group-hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:before:bg-orange-11  before:transition-all before:duration-200`}
 						>
 							About Us
 						</Link>
@@ -142,7 +142,7 @@ export default function SidebarMenu() {
 							href='/contact-us'
 							title='Contact Us'
 							target='_self'
-							className={`text-neutral-8 text-16 font-bold leading-1-4 hover:text-orange-11 group-hover:text-orange-11 hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11  before:transition-all before:duration-200`}
+							className={`text-neutral-8 text-16 font-medium leading-1-4 group-hover:text-orange-11 group-hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:before:bg-orange-11  before:transition-all before:duration-200`}
 						>
 							Contact Us
 						</Link>
@@ -152,7 +152,7 @@ export default function SidebarMenu() {
 							href='/news'
 							title='News'
 							target='_self'
-							className={`text-neutral-8 text-16 font-bold leading-1-4 hover:text-orange-11 group-hover:text-orange-11 hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11  before:transition-all before:duration-200`}
+							className={`text-neutral-8 text-16 font-medium leading-1-4 group-hover:text-orange-11 group-hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:before:bg-orange-11  before:transition-all before:duration-200`}
 						>
 							News
 						</Link>
@@ -196,7 +196,7 @@ export default function SidebarMenu() {
 							href='tel:+84764713925'
 							target='_self'
 							title='tel:+84764713925'
-							className='text-14 font-medium leading-1-4 text-neutral-9 transition-all duration-200 group-hover:text-orange-11'
+							className='text-14 font-medium leading-1-4 text-neutral-8 transition-all duration-200 group-hover:text-orange-11'
 						>
 							+(84)764 713 925
 						</a>
@@ -213,7 +213,7 @@ export default function SidebarMenu() {
 							<path strokeLinecap='round' strokeLinejoin='round' d='M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z' />
 						</svg>
 
-						<p className='text-14 text-neutral-9 leading-1-4 font-medium'>Mon-Fri 9.a.m - 6.p.m</p>
+						<p className='text-14 text-neutral-8 leading-1-4 font-medium'>Mon-Fri 9.a.m - 6.p.m</p>
 					</div>
 					<div className='flex items-center gap-2 div-parent-svg-stroke group'>
 						<svg
@@ -235,7 +235,7 @@ export default function SidebarMenu() {
 							href='mailto:minhcuongvo2501@gmail.com'
 							target='_blank'
 							title='minhcuongvo2501@gmail.com'
-							className='text-14 text-neutral-9 leading-1-4 font-medium block group-hover:text-orange-11 transition-all duration-200'
+							className='text-14 text-neutral-8 leading-1-4 font-medium block group-hover:text-orange-11 transition-all duration-200'
 						>
 							minhcuongvo2501@gmail.com
 						</a>
@@ -247,7 +247,7 @@ export default function SidebarMenu() {
 							viewBox='0 0 24 24'
 							strokeWidth={1.5}
 							stroke='currentColor'
-							className='w-6 h-6 scale-125 ml-1'
+							className='w-6 h-6'
 						>
 							<path strokeLinecap='round' strokeLinejoin='round' d='M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z' />
 							<path
@@ -257,8 +257,8 @@ export default function SidebarMenu() {
 							/>
 						</svg>
 
-						<p className='text-14 text-neutral-9 leading-1-4 font-medium ml-1'>
-							469 Nguyen Huu Tho, Tan Hung, Disc 7, Ho Chi Minh City, Vietnam
+						<p className='text-14 text-neutral-8 leading-1-4 font-medium'>
+							469 Nguyen Huu Tho, Tan Hung, Disc 7, <br /> Ho Chi Minh City, Vietnam
 						</p>
 					</div>
 				</div>
