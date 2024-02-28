@@ -51,7 +51,7 @@ export default function ButtonAnimation(props: ButtonProps) {
 				</div>
 			) : (
 				<button
-					className={`px-4 py-3 relative border border-neutral-11 font-semibold leading-1-4 overflow-hidden group bg-white rounded-lg ${newClassName} `}
+					className={`px-4 py-3 relative border font-semibold leading-1-4 overflow-hidden group rounded-lg ${newClassName} `}
 					type='button'
 					{...restParams}
 					disabled={disabled}

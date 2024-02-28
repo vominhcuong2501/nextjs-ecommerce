@@ -17,7 +17,8 @@ export default function ModalUser() {
 			{isMounted && !convertUserInfo.name ? (
 				<Link href='/sign-in' title='Sign In' target='_self'>
 					<ButtonAnimation
-						className={`text-orange-11  transition-all duration-200  bg-neutral-1 border-transparent  !py-2 hover:scale-110`}
+						className={`text-orange-11 transition-all duration-200  bg-neutral-1 border-transparent  !py-2 hover:text-neutral-1 hover:border-transparent`}
+						classHoverButton='bg-orange-top-yellow-bottom'
 					>
 						Sign In
 					</ButtonAnimation>

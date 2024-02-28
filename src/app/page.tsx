@@ -10,7 +10,8 @@ import CategoriesHome from './component/Homepage/CategoriesHome'
 import HotDeals from './component/Homepage/HotDeals'
 import SliderHome from './component/Homepage/SliderHome'
 import Pioneering from './component/Homepage/Pioneering'
-import NewsHome from './component/Homepage/Banner copy'
+import NewsHome from './component/Homepage/NewsHome'
+import AboutHome from './component/Homepage/AboutHome'
 
 const listProduct = [
 	{
@@ -147,6 +148,14 @@ export default function Home() {
 					<Pioneering />
 					<NewsHome />
 				</div>
+			</div>
+			<div
+				style={{
+					background:
+						'linear-gradient(160deg, rgba(255,224,222,1) 0%, rgba(240,230,254,1) 40%, rgba(219,236,255,1) 100%)'
+				}}
+			>
+				<AboutHome />
 			</div>
 
 			{/* sidebar menu mobile */}

@@ -1,11 +1,7 @@
-'use client'
-import { useDisplay } from '@/lib/hooks/useDisplay'
 import NewsListSwiper from '@/app/(common)/news/_component/NewsListSwiper'
 import Link from 'next/link'
 
 export default function NewsHome() {
-	const isMobile = useDisplay(768)
-
 	return (
 		<div className='mt-2.5 lg:mt-10'>
 			<div className='flex items-center justify-between'>
