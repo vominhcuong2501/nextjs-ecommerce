@@ -5,8 +5,10 @@ import ButtonSidebarMenu from '../ButtonSidebarMenu'
 import Image from 'next/image'
 import Input from '../Input'
 import IconCart from '../IconCart'
-import IconHeart from '../IconHeart'
 import LangSwitcher from '../LangSwitcher'
+import useShowSidebarMenu from '@/lib/store/client/useShowSidebarMenu'
+import SidebarMenu from '../SidebarMenu'
+
 const InputSearch = () => {
 	return (
 		<div className='hidden md:block relative'>
@@ -40,7 +42,10 @@ const InputSearch = () => {
 		</div>
 	)
 }
+
 export default function Header() {
+	const { isShowSidebarMenu, updateIsShowSidebarMenu } = useShowSidebarMenu()
+
 	return (
 		<>
 			<div className={`max-w-[1360px] mx-auto px-4 py-2 md:p-4  relative`}>
@@ -57,12 +62,9 @@ export default function Header() {
 							/>
 						</Link>
 					</div>
-
 					<InputSearch />
-
 					<div className='hidden md:flex items-center gap-2 '>
 						<LangSwitcher />
-						{/* <IconHeart quantity={99} /> */}
 						<IconCart quantity={99} />
 					</div>
 					<div className='block md:hidden'>
@@ -70,6 +72,21 @@ export default function Header() {
 					</div>
 				</div>
 			</div>
+
+			{/* sidebar menu mobile */}
+			<div
+				className={`fixed top-0 transition-all duration-200 h-screen ${
+					isShowSidebarMenu ? 'left-0 !z-50' : '-left-[150vw]'
+				}`}
+			>
+				<SidebarMenu />
+			</div>
+			{isShowSidebarMenu && (
+				<div
+					className={`fixed top-0 transition-all duration-200 w-screen h-screen bg-neutral-9 opacity-80  z-30`}
+					onClick={() => updateIsShowSidebarMenu(false)}
+				></div>
+			)}
 		</>
 	)
 }

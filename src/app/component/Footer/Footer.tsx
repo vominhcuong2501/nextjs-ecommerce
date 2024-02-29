@@ -1,10 +1,9 @@
-'use client'
-
 import PATH_NAME from '@/app/constans/pathname'
 import Link from 'next/link'
 import Logo from '../Logo'
 import SocialList from '../SocialList'
 import Image from 'next/image'
+import MenuFooterMobile from '../MenuFooterMobile'
 
 export default function Footer() {
 	const ItemFirst = () => {
@@ -272,36 +271,39 @@ export default function Footer() {
 	}
 
 	return (
-		<div className='bg-color-footer'>
-			<div className='max-w-[1360px] mx-auto py-5 lg:py-10 px-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-5'>
-				<ItemFirst />
-				<ItemSecond />
-				<ItemThird />
-				<ItemFour />
-			</div>
-			<div className='max-w-[1360px] mx-auto p-4 flex items-center justify-between border-t border-neutral-4 flex-col sm:flex-row gap-3'>
-				<p className='text-16 sm:text-18 text-neutral-8 font-medium leading-1-4'>© 2023 VMC. All rights reserved</p>
-				<div className='flex items-center'>
-					<Image src='./assets/footer/icon-visa.png' alt='Visa' width={77} height={44} title='Visa' loading='lazy' />
-					<Image
-						src='./assets/footer/icon-master.png'
-						alt='Master'
-						width={77}
-						height={44}
-						title='Master'
-						loading='lazy'
-					/>
-					<Image
-						src='./assets/footer/icon-america.png'
-						alt='American Express'
-						width={77}
-						height={44}
-						title='American Express'
-						loading='lazy'
-					/>
-					<Image src='./assets/footer/icon-jcb.png' alt='JCB' width={77} height={44} title='JCB' loading='lazy' />
+		<>
+			<div className='bg-color-footer'>
+				<div className='max-w-[1360px] mx-auto py-5 lg:py-10 px-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-5'>
+					<ItemFirst />
+					<ItemSecond />
+					<ItemThird />
+					<ItemFour />
+				</div>
+				<div className='max-w-[1360px] mx-auto p-4 flex items-center justify-between border-t border-neutral-4 flex-col sm:flex-row gap-3'>
+					<p className='text-16 sm:text-18 text-neutral-8 font-medium leading-1-4'>© 2023 VMC. All rights reserved</p>
+					<div className='flex items-center'>
+						<Image src='./assets/footer/icon-visa.png' alt='Visa' width={77} height={44} title='Visa' loading='lazy' />
+						<Image
+							src='./assets/footer/icon-master.png'
+							alt='Master'
+							width={77}
+							height={44}
+							title='Master'
+							loading='lazy'
+						/>
+						<Image
+							src='./assets/footer/icon-america.png'
+							alt='American Express'
+							width={77}
+							height={44}
+							title='American Express'
+							loading='lazy'
+						/>
+						<Image src='./assets/footer/icon-jcb.png' alt='JCB' width={77} height={44} title='JCB' loading='lazy' />
+					</div>
 				</div>
 			</div>
-		</div>
+			<MenuFooterMobile />
+		</>
 	)
 }

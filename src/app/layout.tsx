@@ -4,14 +4,12 @@ import './globals.css'
 import NextTopLoaderClient from './component/NextNProgress'
 import Providers from '@/lib/hooks/Provider'
 import BaseComponent from './component/BaseComponent'
-// import './i18n/i18n'
-// import { AppProvider } from './context/app.context'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-	title: 'VMC Watch',
-	description: 'VMC Watch'
+	title: 'VMC',
+	description: 'VMC'
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -20,10 +18,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<body className={inter.className}>
 				<Providers>
 					<NextTopLoaderClient />
-					{/* <AppProvider> */}
 					{/* <BaseComponent /> */}
 					{children}
-					{/* </AppProvider> */}
 				</Providers>
 			</body>
 		</html>

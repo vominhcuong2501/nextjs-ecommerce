@@ -95,7 +95,7 @@ export default function ProductItem({ item }: ProductItemProps) {
 							fill='#F4C200'
 						/>
 					</svg>
-					<span className='text-12 leading-1-4 text-neutral-7 font-normal'>{item.rate}</span>
+					<span className='text-12 leading-1-4 text-neutral-7 font-normal block mt-0.5'>{item.rate}</span>
 				</div>
 				{item.comment?.length > 0 && (
 					<div className='flex items-center gap-1'>

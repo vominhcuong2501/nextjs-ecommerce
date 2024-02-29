@@ -11,6 +11,7 @@ import { useDisplay } from '@/lib/hooks/useDisplay'
 
 export default function Banner() {
 	const isMobile = useDisplay(768)
+
 	const pagination = {
 		clickable: true,
 		renderBullet: function (index: number, className: string) {
@@ -83,8 +84,8 @@ export default function Banner() {
 	]
 
 	return (
-		<div className='grid grid-cols-1 items-center '>
-			<div className='flex gap-1 items-center justify-center sm:mt-4'>
+		<div className='grid grid-cols-1 items-center'>
+			<div className='flex gap-1 items-center justify-center lg:mt-4 sm:py-0 md:py-5 lg:py-0'>
 				<div className='group'>
 					<Swiper
 						spaceBetween={30}
@@ -192,7 +193,7 @@ export default function Banner() {
 					</Link>
 				</div>
 			</div>
-			<div className='grid grid-cols-2 md:grid-cols-4 lg:gap-10 max-w-[375px] sm:max-w-[500px] md:max-w-[768px] lg:max-w-[1112px] mx-auto py-4 lg:py-10 w-full pr-4 md:pr-0'>
+			<div className='hidden lg:grid grid-cols-2 md:grid-cols-4 lg:gap-10 max-w-[375px] sm:max-w-[500px] md:max-w-[768px] lg:max-w-[1112px] mx-auto py-4 lg:py-10 w-full pr-4 md:pr-0'>
 				{dataIcon?.map((item) => {
 					return (
 						<div key={item.title} className='relative min-w-[170px] md:min-w-[215px]'>

@@ -1,10 +1,5 @@
-'use client'
 import Header from './component/Header'
-import SidebarMenu from './component/SidebarMenu'
-import useShowSidebarMenu from '@/lib/store/client/useShowSidebarMenu'
 import Menu from './component/Menu'
-import { useDisplay } from '@/lib/hooks/useDisplay'
-import MenuApp from './component/MenuMobile/MenuMobile'
 import Banner from './component/Homepage/Banner'
 import CategoriesHome from './component/Homepage/CategoriesHome'
 import HotDeals from './component/Homepage/HotDeals'
@@ -114,10 +109,6 @@ const listProduct = [
 ]
 
 export default function Home() {
-	const { isShowSidebarMenu, updateIsShowSidebarMenu } = useShowSidebarMenu()
-
-	const isMobile = useDisplay(768)
-
 	const contentHotDeal = {
 		image: './assets/home/img-hot-deals.png',
 		imageMobile: './assets/home/img-hot-deals-mobile.png',
@@ -152,28 +143,6 @@ export default function Home() {
 			</div>
 			<AboutHome />
 			<Footer />
-
-			{/* sidebar menu mobile */}
-			<div
-				className={`fixed top-0 transition-all duration-200 h-screen ${
-					isShowSidebarMenu ? 'left-0 !z-50' : '-left-[150vw]'
-				}`}
-			>
-				<SidebarMenu />
-			</div>
-			{isShowSidebarMenu && (
-				<div
-					className={`fixed top-0 transition-all duration-200 w-screen h-screen bg-neutral-9 opacity-80  z-30`}
-					onClick={() => updateIsShowSidebarMenu(false)}
-				></div>
-			)}
-
-			{/* menu mobile  */}
-			{isMobile && (
-				<div className={`sticky bottom-0 left-0 right-0 bg-white shadow-black1 z-50`}>
-					<MenuApp />
-				</div>
-			)}
 		</main>
 	)
 }

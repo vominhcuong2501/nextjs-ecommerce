@@ -9,6 +9,7 @@ import useDataUser from '@/lib/store/client/infomationUser'
 import { useReverseModifyObject } from '@/lib/utils/modifyContent'
 import LangSwitcher from '../LangSwitcher'
 import ButtonAnimation from '../ButtonAnimation'
+import ButtonSidebarMenu from '../ButtonSidebarMenu'
 
 export default function SidebarMenu() {
 	const { isShowSidebarMenu, updateIsShowSidebarMenu } = useShowSidebarMenu()
@@ -30,22 +31,10 @@ export default function SidebarMenu() {
 							priority
 						/>
 					</Link>
-					<svg
-						width='32'
-						height='32'
-						viewBox='0 0 32 32'
-						fill='none'
-						xmlns='http://www.w3.org/2000/svg'
-						onClick={() => updateIsShowSidebarMenu(!isShowSidebarMenu)}
-						className='icon-svg-fill-hover cursor-pointer border border-transparent hover:border-orange-11 rounded-md transition-all duration-200 scale-125'
-					>
-						<path
-							fillRule='evenodd'
-							clipRule='evenodd'
-							d='M8.62615 8.62627C9.01667 8.23574 9.64983 8.23574 10.0404 8.62627L15.9999 14.5859L21.9595 8.62632C22.35 8.2358 22.9832 8.2358 23.3737 8.62632C23.7642 9.01685 23.7642 9.65001 23.3737 10.0405L17.4142 16.0001L23.3736 21.9595C23.7642 22.3501 23.7642 22.9832 23.3736 23.3738C22.9831 23.7643 22.3499 23.7643 21.9594 23.3738L15.9999 17.4143L10.0404 23.3738C9.64989 23.7643 9.01673 23.7643 8.6262 23.3738C8.23568 22.9833 8.23568 22.3501 8.6262 21.9596L14.5857 16.0001L8.62615 10.0405C8.23562 9.64996 8.23562 9.01679 8.62615 8.62627Z'
-							fill='#242424'
-						/>
-					</svg>
+
+					<div onClick={() => updateIsShowSidebarMenu(!isShowSidebarMenu)}>
+						<ButtonSidebarMenu />
+					</div>
 				</div>
 
 				<div className='bg-orange-11 p-4 '>
@@ -74,7 +63,7 @@ export default function SidebarMenu() {
 							<div>
 								<div className='flex items-center gap-2 text-16 font-semibold text-neutral-1 leading-1-4'>
 									<Link
-										href={'/sign-in'}
+										href={PATH_NAME.SIGN_IN}
 										target='_self'
 										className='transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-neutral-1 before:-bottom-1 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-200 hover:before:w-full hover:before:left-0 hover:before:right-0'
 										title='Sign In'
@@ -83,7 +72,7 @@ export default function SidebarMenu() {
 									</Link>
 									<p>|</p>
 									<Link
-										href={'/register'}
+										href={PATH_NAME.REGISTER}
 										target='_self'
 										className='transition-all duration-200 relative before:absolute before:content-[""] before:h-0.5 before:w-0 before:bg-neutral-1 before:-bottom-1 before:rounded before:left-1/2 before:right-1/2 before:transition-all before:duration-200 hover:before:w-full hover:before:left-0 hover:before:right-0'
 										title='Register'
@@ -119,7 +108,7 @@ export default function SidebarMenu() {
 				<ul className={`grid grid-cols-1 items-center p-4 gap-4`}>
 					<li className='group relative'>
 						<Link
-							href='/categories'
+							href={PATH_NAME.CATEGORIES}
 							title='Categories'
 							target='_self'
 							className={`text-neutral-8 text-16 font-medium leading-1-4 group-hover:text-orange-11 group-hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:before:bg-orange-11  before:transition-all before:duration-200`}
@@ -129,7 +118,7 @@ export default function SidebarMenu() {
 					</li>
 					<li className='group relative'>
 						<Link
-							href='/about-us'
+							href={PATH_NAME.ABOUT_US}
 							title='About Us'
 							target='_self'
 							className={`text-neutral-8 text-16 font-medium leading-1-4 group-hover:text-orange-11 group-hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:before:bg-orange-11  before:transition-all before:duration-200`}
@@ -139,32 +128,12 @@ export default function SidebarMenu() {
 					</li>
 					<li className='group relative'>
 						<Link
-							href='/contact-us'
+							href={PATH_NAME.CONTACT_US}
 							title='Contact Us'
 							target='_self'
 							className={`text-neutral-8 text-16 font-medium leading-1-4 group-hover:text-orange-11 group-hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:before:bg-orange-11  before:transition-all before:duration-200`}
 						>
 							Contact Us
-						</Link>
-					</li>
-					<li className='group relative'>
-						<Link
-							href='/news'
-							title='News'
-							target='_self'
-							className={`text-neutral-8 text-16 font-medium leading-1-4 group-hover:text-orange-11 group-hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 group-hover:before:h-full group-hover:before:top-0 group-hover:before:bottom-0 group-hover:before:bg-orange-11  before:transition-all before:duration-200`}
-						>
-							News
-						</Link>
-					</li>
-					<li className='group relative'>
-						<Link
-							href='/promotions'
-							title='Promotions'
-							target='_self'
-							className={`text-neutral-8 text-16 font-bold leading-1-4 group-hover:text-orange-11 hover:pl-3 transition-all duration-200 relative before:absolute before:content-[''] before:left-0 before:top-1/2 before:bottom-1/2 before:h-0 before:w-0.5 hover:before:h-full hover:before:top-0 hover:before:bottom-0 group-hover:before:bg-orange-11  before:transition-all before:duration-200`}
-						>
-							Promotions
 						</Link>
 					</li>
 				</ul>
