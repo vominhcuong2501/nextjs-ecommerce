@@ -154,7 +154,9 @@ const config: Config = {
 					'linear-gradient(160deg, rgba(255,224,222,1) 0%, rgba(240,230,254,1) 40%, rgba(219,236,255,1) 100%)',
 				'color-footer':
 					'linear-gradient(163deg, rgba(255,227,201,1) 0%, rgba(255,255,255,1) 50%, rgba(255,247,234,1) 100%)',
-				'about-us': 'linear-gradient(180deg, rgba(176,255,237,0.9023984593837535) 0%, rgba(255,255,255,1) 80%);'
+				'about-us': 'linear-gradient(180deg, rgba(176,255,237,0.9023984593837535) 0%, rgba(255,255,255,1) 80%)',
+				'people-liked':
+					'linear-gradient(0deg, rgba(255,245,169,1) 0%, rgba(251,255,209,0.9) 50%, rgba(255,255,255,0.9) 100%);'
 			})
 		},
 		container: {
