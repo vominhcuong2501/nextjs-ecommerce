@@ -6,8 +6,9 @@ import HotDeals from './component/Homepage/HotDeals'
 import SliderHome from './component/Homepage/SliderHome'
 import Pioneering from './component/Homepage/Pioneering'
 import NewsHome from './component/Homepage/NewsHome'
-import AboutHome from './component/Homepage/AboutHome'
 import Footer from './component/Footer'
+import AboutHome from './component/Homepage/AboutHome'
+import TrustPilotSlider from './component/Homepage/TrustPilotSlider'
 
 const listProduct = [
 	{
@@ -128,9 +129,7 @@ export default function Home() {
 				<Header />
 				<Menu />
 			</div>
-			<div className='max-w-[1360px] mx-auto overflow-hidden'>
-				<Banner />
-			</div>
+			<Banner />
 			<div className='bg-neutral-2 py-2.5 lg:py-[40px]'>
 				<div className='max-w-[1360px] mx-auto overflow-hidden'>
 					<CategoriesHome />
@@ -141,6 +140,7 @@ export default function Home() {
 					<NewsHome />
 				</div>
 			</div>
+			<TrustPilotSlider />
 			<AboutHome />
 			<Footer />
 		</main>

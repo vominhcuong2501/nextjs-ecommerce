@@ -153,7 +153,8 @@ const config: Config = {
 				'about-home':
 					'linear-gradient(160deg, rgba(255,224,222,1) 0%, rgba(240,230,254,1) 40%, rgba(219,236,255,1) 100%)',
 				'color-footer':
-					'linear-gradient(163deg, rgba(255,227,201,1) 0%, rgba(255,255,255,1) 50%, rgba(255,247,234,1) 100%)'
+					'linear-gradient(163deg, rgba(255,227,201,1) 0%, rgba(255,255,255,1) 50%, rgba(255,247,234,1) 100%)',
+				'about-us': 'linear-gradient(180deg, rgba(176,255,237,0.9023984593837535) 0%, rgba(255,255,255,1) 80%);'
 			})
 		},
 		container: {

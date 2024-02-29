@@ -317,11 +317,34 @@ select {
 	max-width: 444px !important;
 }
 
+/* trustpilot  */
+.trustpilot .swiper-pagination {
+	position: absolute;
+	top: 0;
+	left: 35px;
+	height: 50px;
+}
+
+.trust-pilot-arrow-left,
+.trust-pilot-arrow-right {
+	border: 1px solid #ff7207;
+	fill: #ff7207;
+}
+
+.trust-pilot-arrow-left:disabled,
+.trust-pilot-arrow-right:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
 @media (max-width: 640px) {
 	.slide-home .swiper-pagination-bullet {
 		width: 20px;
 	}
 	.slide-home .swiper-pagination-bullet-active::before {
 		width: 10px;
+	}
+	.trustpilot .swiper-pagination {
+		left: 0;
 	}
 }
