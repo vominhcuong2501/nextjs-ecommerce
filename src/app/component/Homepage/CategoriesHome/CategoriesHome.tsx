@@ -4,10 +4,8 @@ import 'swiper/css'
 import { Autoplay } from 'swiper/modules'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useDisplay } from '@/lib/hooks/useDisplay'
 
 export default function CategoriesHome() {
-	const isMobile = useDisplay(1024)
 	const dataCategories = [
 		{
 			img: './assets/home/category-1.png',
@@ -62,9 +60,9 @@ export default function CategoriesHome() {
 	]
 
 	return (
-		<div className=' bg-neutral-1 py-4 lg:rounded-md'>
+		<div className=' bg-neutral-1 py-4 lg:rounded-md '>
 			<h2 className='pl-4 text-18 lg:text-24 font-bold text-neutral-8 leading-1-4'>Popular Categories</h2>
-			{isMobile ? (
+			<div className='block lg:hidden'>
 				<Swiper
 					slidesPerView={2.5}
 					spaceBetween={30}
@@ -83,7 +81,7 @@ export default function CategoriesHome() {
 							spaceBetween: 40
 						}
 					}}
-					className='mt-4'
+					className='mt-4 '
 				>
 					{dataCategories?.map((item) => {
 						return (
@@ -110,32 +108,32 @@ export default function CategoriesHome() {
 						)
 					})}
 				</Swiper>
-			) : (
-				<div className='grid grid-cols-5 gap-5 mt-4'>
-					{dataCategories?.map((item) => {
-						return (
-							<Link
-								href={item.link}
-								target='_self'
-								title={item.link}
-								className='text-center text-16 font-medium leading-1-4 text-neutral-8 group hover:text-orange-11 transition-all duration-200'
-								key={item.img}
-							>
-								<Image
-									src={item.img}
-									alt={item.title}
-									width={140}
-									height={140}
-									title={item.title}
-									loading='lazy'
-									className='h-[80px] w-[80px] lg:w-[140px] lg:h-[140px] mx-auto scale-90 group-hover:scale-100 group-hover:shadow-black1 rounded-full transition-all duration-200'
-								/>
-								{item.title}
-							</Link>
-						)
-					})}
-				</div>
-			)}
+			</div>
+
+			<div className='lg:grid grid-cols-5 gap-5 mt-4 hidden'>
+				{dataCategories?.map((item) => {
+					return (
+						<Link
+							href={item.link}
+							target='_self'
+							title={item.link}
+							className='text-center text-16 font-medium leading-1-4 text-neutral-8 group hover:text-orange-11 transition-all duration-200'
+							key={item.img}
+						>
+							<Image
+								src={item.img}
+								alt={item.title}
+								width={140}
+								height={140}
+								title={item.title}
+								loading='lazy'
+								className='h-[80px] w-[80px] lg:w-[140px] lg:h-[140px] mx-auto scale-90 group-hover:scale-100 group-hover:shadow-black1 rounded-full transition-all duration-200'
+							/>
+							{item.title}
+						</Link>
+					)
+				})}
+			</div>
 		</div>
 	)
 }

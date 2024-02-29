@@ -20,29 +20,26 @@ export default function HotDeals({ data, content }: HotDealsProps) {
 	const isMobile = useDisplay(768)
 
 	return (
-		<div className='mt-2.5 lg:mt-10'>
+		<div className='mt-2.5 lg:mt-10 '>
 			<Link href={content.linkCategory} title={content.title} target='_self'>
-				{isMobile ? (
-					<Image
-						src={content.imageMobile}
-						alt={content.title}
-						width={375}
-						height={66}
-						title={content.title}
-						loading='lazy'
-						className='w-full'
-					/>
-				) : (
-					<Image
-						src={content.image}
-						alt={content.title}
-						width={1360}
-						height={240}
-						title={content.title}
-						loading='lazy'
-						className='w-full'
-					/>
-				)}
+				<Image
+					src={content.imageMobile}
+					alt={content.title}
+					width={375}
+					height={66}
+					title={content.title}
+					loading='lazy'
+					className='w-full block md:hidden'
+				/>
+				<Image
+					src={content.image}
+					alt={content.title}
+					width={1360}
+					height={240}
+					title={content.title}
+					loading='lazy'
+					className='w-full hidden md:block'
+				/>
 			</Link>
 			<div className='mt-5 md:mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2.5   px-4 xl:px-0'>
 				{data?.map((item: ProductItemProp, index: number) => {
@@ -62,16 +59,19 @@ export default function HotDeals({ data, content }: HotDealsProps) {
 						)
 					}
 				})}
-				{isMobile && (
-					<Link href={content.linkCategory} className='col-span-2 text-center' title='See More' target='_self'>
-						<ButtonAnimation
-							className={`text-orange-11  transition-all duration-200  bg-neutral-1 border-orange-11  !py-2 hover:border-transparent hover:text-neutral-1`}
-							classHoverButton='bg-orange-top-yellow-bottom'
-						>
-							See More
-						</ButtonAnimation>
-					</Link>
-				)}
+				<Link
+					href={content.linkCategory}
+					className='col-span-2 text-center block md:hidden'
+					title='See More'
+					target='_self'
+				>
+					<ButtonAnimation
+						className={`text-orange-11  transition-all duration-200  bg-neutral-1 border-orange-11  !py-2 hover:border-transparent hover:text-neutral-1`}
+						classHoverButton='bg-orange-top-yellow-bottom'
+					>
+						See More
+					</ButtonAnimation>
+				</Link>
 			</div>
 		</div>
 	)

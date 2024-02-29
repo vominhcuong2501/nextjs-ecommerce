@@ -5,10 +5,10 @@ import CategoriesHome from './component/Homepage/CategoriesHome'
 import HotDeals from './component/Homepage/HotDeals'
 import SliderHome from './component/Homepage/SliderHome'
 import Pioneering from './component/Homepage/Pioneering'
-import NewsHome from './component/Homepage/NewsHome'
 import Footer from './component/Footer'
 import AboutHome from './component/Homepage/AboutHome'
 import TrustPilotSlider from './component/Homepage/TrustPilotSlider'
+import 'animate.css'
 
 const listProduct = [
 	{
@@ -137,7 +137,6 @@ export default function Home() {
 					<SliderHome />
 					<HotDeals data={listProduct} content={contentTopRated} />
 					<Pioneering />
-					<NewsHome />
 				</div>
 			</div>
 			<TrustPilotSlider />

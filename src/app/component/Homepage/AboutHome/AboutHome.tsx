@@ -1,12 +1,9 @@
-'use client'
 import Image from 'next/image'
 import ButtonAnimation from '../../ButtonAnimation'
 import Input from '../../Input'
-import { useDisplay } from '@/lib/hooks/useDisplay'
 import SocialList from '../../SocialList'
 
 export default function AboutHome() {
-	const isMobile = useDisplay(768)
 	return (
 		<div className='bg-about-home'>
 			<div className='max-w-[1360px] mx-auto px-4 pt-5 md:pt-10 pb-[150px] md:pb-[100px]'>
@@ -50,28 +47,24 @@ export default function AboutHome() {
 				</div>
 
 				<div className='relative mt-10'>
-					{isMobile ? (
-						<Image
-							src={'./assets/home/bg-about-home.png'}
-							alt='Elevate Your E-Commerce Journey With VMC® Today!'
-							width={1360}
-							height={250}
-							className='mx-auto w-full  h-[251px] sm:h-auto'
-							title='Elevate Your E-Commerce Journey With VMC® Today!'
-							loading='lazy'
-						/>
-					) : (
-						<Image
-							src={'./assets/home/bg-about-home.png'}
-							alt='Elevate Your E-Commerce Journey With VMC® Today!'
-							width={375}
-							height={251}
-							className='mx-auto w-full'
-							title='Elevate Your E-Commerce Journey With VMC® Today!'
-							loading='lazy'
-						/>
-					)}
-
+					<Image
+						src={'./assets/home/bg-about-home.png'}
+						alt='Elevate Your E-Commerce Journey With VMC® Today!'
+						width={1360}
+						height={250}
+						className='mx-auto w-full h-[251px] sm:h-auto block md:hidden'
+						title='Elevate Your E-Commerce Journey With VMC® Today!'
+						loading='lazy'
+					/>
+					<Image
+						src={'./assets/home/bg-about-home.png'}
+						alt='Elevate Your E-Commerce Journey With VMC® Today!'
+						width={375}
+						height={251}
+						className='mx-auto w-full hidden md:block'
+						title='Elevate Your E-Commerce Journey With VMC® Today!'
+						loading='lazy'
+					/>
 					<h2 className='text-18 lg:text-32 font-bold text-neutral-1 leading-1-4 absolute top-5 md:top-10 left-1/2 -translate-x-1/2 w-full text-center'>
 						Elevate Your E-Commerce <br /> Journey With VMC® Today!
 					</h2>

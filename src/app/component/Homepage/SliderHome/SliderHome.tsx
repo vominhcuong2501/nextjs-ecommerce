@@ -6,10 +6,8 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules'
 import Image from 'next/image'
-import { useDisplay } from '@/lib/hooks/useDisplay'
 
 export default function SliderHome() {
-	const isMobile = useDisplay(640)
 	const pagination = {
 		clickable: true,
 		renderBullet: function (index: number, className: string) {
@@ -73,25 +71,24 @@ export default function SliderHome() {
 					{dataSlide?.map((img, index) => {
 						return (
 							<SwiperSlide key={index}>
-								{isMobile ? (
-									<Image
-										src={img.mobile}
-										alt={'Promotions'}
-										width={165}
-										height={196}
-										title={'Promotions'}
-										loading='lazy'
-									/>
-								) : (
-									<Image
-										src={img.desktop}
-										alt={'Promotions'}
-										width={433}
-										height={512}
-										title={'Promotions'}
-										loading='lazy'
-									/>
-								)}
+								<Image
+									src={img.mobile}
+									alt={'Promotions'}
+									width={165}
+									height={196}
+									title={'Promotions'}
+									loading='lazy'
+									className='block sm:hidden'
+								/>
+								<Image
+									src={img.desktop}
+									alt={'Promotions'}
+									width={433}
+									height={512}
+									title={'Promotions'}
+									loading='lazy'
+									className='hidden md:block'
+								/>
 							</SwiperSlide>
 						)
 					})}
@@ -131,25 +128,24 @@ export default function SliderHome() {
 								key={index}
 								className='sm:!w-[283px] transition-all duration-200 opacity-50 hover:opacity-100 cursor-pointer'
 							>
-								{isMobile ? (
-									<Image
-										src={img.mobile}
-										alt={'Promotions'}
-										width={165}
-										height={196}
-										title={'Promotions'}
-										loading='lazy'
-									/>
-								) : (
-									<Image
-										src={img.desktop}
-										alt={'Promotions'}
-										width={283}
-										height={512}
-										title={'Promotions'}
-										loading='lazy'
-									/>
-								)}
+								<Image
+									src={img.mobile}
+									alt={'Promotions'}
+									width={165}
+									height={196}
+									title={'Promotions'}
+									loading='lazy'
+									className='block sm:hidden'
+								/>
+								<Image
+									src={img.desktop}
+									alt={'Promotions'}
+									width={283}
+									height={512}
+									title={'Promotions'}
+									loading='lazy'
+									className='hidden sm:block'
+								/>
 							</SwiperSlide>
 						)
 					})}

@@ -1,10 +1,6 @@
-'use client'
 import Image from 'next/image'
-import { useDisplay } from '@/lib/hooks/useDisplay'
 
 export default function BannerAboutUs() {
-	const isMobile = useDisplay(768)
-
 	return (
 		<div className='bg-about-us'>
 			<div className='max-w-[1360px] mx-auto p-4 grid grid-cols-1 md:grid-cols-2 items-center'>
@@ -15,25 +11,22 @@ export default function BannerAboutUs() {
 						be part of the vibrant community that defines who we are.
 					</p>
 				</div>
-				{isMobile ? (
-					<Image
-						src='/assets/about-us/img-about-us-mobile.png'
-						alt='About Us'
-						width={343}
-						height={295}
-						loading='lazy'
-						className='mx-auto'
-					/>
-				) : (
-					<Image
-						src='/assets/about-us/img-about-us.png'
-						alt='About Us'
-						width={795}
-						height={400}
-						loading='lazy'
-						className='w-full'
-					/>
-				)}
+				<Image
+					src='/assets/about-us/img-about-us-mobile.png'
+					alt='About Us'
+					width={343}
+					height={295}
+					loading='lazy'
+					className='mx-auto block md:hidden'
+				/>
+				<Image
+					src='/assets/about-us/img-about-us.png'
+					alt='About Us'
+					width={795}
+					height={400}
+					loading='lazy'
+					className='w-full hidden md:block'
+				/>
 			</div>
 		</div>
 	)

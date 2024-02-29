@@ -1,9 +1,6 @@
 'use client'
 import Image from 'next/image'
-import { useDisplay } from '@/lib/hooks/useDisplay'
-
 export default function Pioneering() {
-	const isMobile = useDisplay(768)
 
 	return (
 		<div className='mt-2.5 lg:mt-10 p-4 grid grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-5  bg-neutral-1 items-center xl:rounded-md px-4 '>

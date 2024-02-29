@@ -3,6 +3,7 @@ import BannerAboutUs from './component/BannerAboutUs'
 import MissionVisionValues from './component/MissionVisionValues'
 import PeopleLiked from './component/PeopleLiked'
 import Achievement from './component/Achievement'
+import SupportAnswer from './component/SupportAnswer'
 
 export default function AboutUs() {
 	return (
@@ -11,6 +12,7 @@ export default function AboutUs() {
 			<MissionVisionValues />
 			<PeopleLiked />
 			<Achievement />
+			<SupportAnswer />
 		</section>
 	)
 }
