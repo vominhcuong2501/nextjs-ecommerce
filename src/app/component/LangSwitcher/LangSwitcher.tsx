@@ -9,7 +9,7 @@ export default function LangSwitcher() {
 	const { isShowLang, updateIsShowPhone, updateIsShowUser, updateIsShowLang } = useShowModalHeader()
 	return (
 		<>
-			<div className='md:flex items-center gap-4 block'>
+			<div className='flex items-center gap-4 md:hidden'>
 				<a
 					href='#'
 					target='_self'
