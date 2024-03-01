@@ -156,7 +156,9 @@ const config: Config = {
 					'linear-gradient(163deg, rgba(255,227,201,1) 0%, rgba(255,255,255,1) 50%, rgba(255,247,234,1) 100%)',
 				'about-us': 'linear-gradient(180deg, rgba(176,255,237,0.9023984593837535) 0%, rgba(255,255,255,1) 80%)',
 				'people-liked':
-					'linear-gradient(0deg, rgba(255,245,169,1) 0%, rgba(251,255,209,0.9) 50%, rgba(255,255,255,0.9) 100%);'
+					'linear-gradient(0deg, rgba(255,245,169,1) 0%, rgba(251,255,209,0.9) 50%, rgba(255,255,255,0.9) 100%);',
+				'contact-us':
+					'linear-gradient(180deg, rgba(137,248,255,1) 0%, rgba(170,255,246,0.804359243697479) 50%, rgba(255,255,255,0.9192051820728291) 100%);'
 			})
 		},
 		container: {
