@@ -100,7 +100,7 @@ export default function SliderHome() {
 					spaceBetween={0}
 					modules={[Autoplay]}
 					autoplay={{
-						delay: 5000,
+						delay: 3000,
 						disableOnInteraction: false
 					}}
 					breakpoints={{

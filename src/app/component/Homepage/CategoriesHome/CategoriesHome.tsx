@@ -68,7 +68,7 @@ export default function CategoriesHome() {
 					spaceBetween={30}
 					modules={[Autoplay]}
 					autoplay={{
-						delay: 5000,
+						delay: 3000,
 						disableOnInteraction: false
 					}}
 					breakpoints={{

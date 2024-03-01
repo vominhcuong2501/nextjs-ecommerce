@@ -63,7 +63,7 @@ export default function ProductItem({ item }: ProductItemProps) {
 				modules={[EffectFade, Autoplay, Pagination]}
 				className='pagination-product-item !pb-8'
 				autoplay={{
-					delay: 5000,
+					delay: 3000,
 					disableOnInteraction: false
 				}}
 			>

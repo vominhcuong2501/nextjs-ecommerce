@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import 'swiper/css'
 import 'swiper/css/navigation'
-import { Navigation, Pagination } from 'swiper/modules'
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 export interface TrustPilotListProps {
@@ -121,7 +121,11 @@ export default function SlideTrustPilot() {
 					}
 				}}
 				navigation={{ nextEl: '.trust-pilot-arrow-left', prevEl: '.trust-pilot-arrow-right' }}
-				modules={[Navigation, Pagination]}
+				modules={[Navigation, Pagination, Autoplay]}
+				autoplay={{
+					delay: 3000,
+					disableOnInteraction: false
+				}}
 				breakpoints={{
 					768: {
 						slidesPerView: 2

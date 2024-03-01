@@ -8,7 +8,6 @@ import Pioneering from './component/Homepage/Pioneering'
 import Footer from './component/Footer'
 import AboutHome from './component/Homepage/AboutHome'
 import TrustPilotSlider from './component/Homepage/TrustPilotSlider'
-import 'animate.css'
 
 const listProduct = [
 	{
@@ -139,8 +138,8 @@ export default function Home() {
 					<Pioneering />
 				</div>
 			</div>
-			<TrustPilotSlider />
 			<AboutHome />
+			<TrustPilotSlider />
 			<Footer />
 		</main>
 	)
